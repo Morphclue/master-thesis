@@ -324,7 +324,7 @@ Das bedeutet, dass der Knoten $x$ unterhalb des Knotens $y$ liegt, wenn $x < y$ 
                 Rindfleischburger                                                                                  & X              & X                          & X                        & X        \\ \hline
             \end{tabular}
         }
-        \caption{Formaler Kontext - Tiere}
+        \caption{Formaler Kontext - Narhungsmittel}
         \label{table:fca-food}
     \end{table}
 \end{center}
@@ -339,4 +339,38 @@ Dabei ist jedes Getreide ein pflanzliches Nahrungsmittel.
 Der Apfel ist ein pflanzliches Nahrungsmittel, jedoch kein Getreide.
 Der Rindfleischburger besitzt alle vier aufgeführten Merkmale.
 Das liegt daran, dass er sowohl aus tierischen als auch pflanzlichen Nahrungsmitteln (in diesem Fall unter anderem auch aus Getreide) besteht.\\
+
+\begin{figure}[!ht]
+    \centering
+    \begin{tikzpicture}
+        \begin{scope}[every node/.style={circle,thick,draw}]
+        \node (A) at (4,6) {};
+        \node (B) at (2,4) {};
+        \node (C) at (6,4) {};
+        \node (D) at (0,2) {};
+        \node (E) at (3,0) {};
+        \end{scope}
+
+        % Merkmale
+        \draw (A) +(0,0.25) node[above] {Nahrungsmittel};
+        \draw (B) +(0,0.25) node[above, align=left] {Pflanzliche\\ Nahrungsmittel};
+        \draw (C) +(0,0.25) node[above, align=left] {Tierische\\ Nahrungsmittel};
+        \draw (D) +(0,0.25) node[above] {Getreide};
+
+        % Gegenstände
+        \draw (B) +(0,-0.25) node[below] {Apfel};
+        \draw (C) +(0,-0.25) node[below] {Rindfleisch};
+        \draw (D) +(0,-0.25) node[below] {Weizen};
+        \draw (D) +(0,-0.75) node[below] {Hafer};
+        \draw (E) +(0,-0.25) node[below] {Rindfleischburger};
+
+        % Relationen
+        \draw (A) -- (B);
+        \draw (A) -- (C);
+        \draw (B) -- (D);
+        \draw (C) -- (E);
+        \draw (D) -- (E);
+    \end{tikzpicture}
+    \caption{\label{fig:begriffsverband}Begriffsverband - Nahrungsmittel}
+\end{figure}
 
