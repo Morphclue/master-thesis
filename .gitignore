@@ -10,3 +10,6 @@
 *.synctex.gz
 .vscode
 temp
+
+# PyCharm
+.idea
