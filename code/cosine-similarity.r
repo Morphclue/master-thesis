@@ -12,6 +12,8 @@ plot_cosine_similarity <- function(file_name) {
     geom_tile() +
     scale_fill_gradientn(colors = rev(heat.colors(256))) +
     theme_minimal() +
+    scale_x_continuous(breaks = 1:13) +
+    scale_y_continuous(breaks = 1:13) +
     labs(title = "Cosine Similarity Between Articles", x = "Article #", y = "Article #", fill = "Similarity") +
     theme(plot.title = element_text(hjust = 0.5))
 
