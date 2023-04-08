@@ -167,6 +167,49 @@ Zum anderen wird eine bewusste Entscheidung für eine Perspektive auf ein Thema 
 Nutzende müssen sich bewusst für eine Welt entscheiden, um die Artikel dieser Welt einsehen zu können.
 Dies führt zwar auch dazu, dass Nutzende mehr Klicks benötigen, um die gewünschten Artikel zu erreichen, jedoch überwiegen genannten Vorteile. \\
 
+% Unterschiedliche Arten der Interaktion
+Es gibt zwei verschiedene Wege, um mit einem Knoten zu interagieren.
+Es ist möglich auf den oberen Halbkreis und auf den unteren Halbkreis zu klicken.
+Beide Interaktionsmöglichkeiten existierten bereits in der Vorstudie.
+Die Interaktion mit dem oberen Halbkreis führt dazu, dass alle untergeordneten Knoten farblich hervorgehoben werden.
+Die Leserichtung in diesem Fall ist von oben nach unten und bedeutet, dass alle Artikel bezüglich einer Welt angezeigt werden.
+Mithilfe dieser Interaktion soll es möglich sein, sich einen Überblick über die Artikel einer Welt zu verschaffen.
+Eine Interaktion mit dem unteren Halbkreis hingegen sorgt dafür, dass alle übergeordneten Knoten farblich hervorgehoben werden.
+Die Leserichtung ist von unten nach oben.
+Die Bedeutung dieser Interaktion ist, dass alle übergeordneten Welten bezüglich eines Knotens angezeigt werden.
+Interpretiert werden kann diese Interaktion als eine Art Hilfsfunktion, welche es ermöglicht anzuzeigen, welche Welten zu einem bestimmten Knoten gehören.\\
+
+% Neue Interaktion
+Im neuen Prototypen werden weiterhin die Pfade und Knoten farblich hervorgehoben, jedoch werden die Artikel nicht mehr im Graphen dargestellt.
+Stattdessen werden die Artikel in einer Liste neben dem Graphen angezeigt.
+Diese Liste unterscheidet sich je nach Interaktion.
+Eine Interaktion mit dem oberen Halbkreis listet weiterhin alle Artikel auf, welche zur ausgewählten Welt gehören.
+Da im Vergleich zur Vorstudie Informationen verloren gehen würden, wenn nur die Artikel einer Welt angezeigt werden ohne die Welten selbst, wurde die Liste um eine Art Kategorisierung erweitert.
+Die Artikel innerhalb der Liste werden in Anzahl der weiteren Welten gruppiert, welche den Artikel beschreiben.
+Dabei gibt die Zahl Null an, dass die aufgelisteten Artikel in der ausgewählten Welt vorkommen.
+Eine Eins bedeutet, dass die Artikel in der ausgewählten Welt und einer weiteren Welt vorkommen.\\
+
+% Beispiel Welten Liste
+Ein Beispiel hilft hierbei, die Funktionsweise zu verstehen.
+Angenommen es existieren drei Welten: Staat, Markt und Industrie aus den \ac{EC}.
+Der erste Artikel gehört der Welt Staat an.
+Der zweite Artikel gehört der Welt Staat und Markt an.
+Der dritte Artikel gehört der Welt Staat und Industrie an.
+Wenn nun eine Testperson auf den Knoten Staat klickt, dann werden alle Artikel aufgelistet, welche zu der Welt Staat gehören.
+Bei null wäre dies nur der erste Artikel, weil nur die Welt Staat vorkommt und keine weitere Welt beschrieben wird.
+Bei einer Eins wären dies der zweite und der dritte Artikel, da diese Artikel in der Welt Staat und einer weiteren Welt vorkommen.
+In diesem Fall wären die zusätzlichen Welten Markt oder Industrie.\\
+
+% Nachteil Liste
+Der Nachteil an dieser Darstellung ist, dass die Liste nicht konkret aufzeigen kann, welche Artikel in welcher Welt vorkommen.
+Es wäre auch möglich konkrete Welten anzugeben, jedoch würde dies die Lesbarkeit der Liste beeinträchtigen.
+Das liegt daran, dass für jede zusätzliche Welt eigene Überschriften benötigt würden.
+Dies würde die Liste wesentlich länger machen.
+Im vorhin genannten Beispiel wären dies drei Überschriften statt zwei Überschriften.
+In einem größeren Graphen mit mehr Welten wären dies wesentlich mehr.
+Da diese Iterationsstufe des Prototyps darauf bedacht ist Informationen möglichst zu komprimieren, wurde auf die genaue Angabe der Welten verzichtet.\\
+
+
 % Versuchsaufbau
 % Adobe XD
 % Prototyp Liste
