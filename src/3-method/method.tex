@@ -78,17 +78,20 @@ Auf diese Weise gehören Artikel, welche im untersten Knoten liegen zu der Welt 
 \begin{figure}[!ht]
     \centering
     \begin{tikzpicture}
+        \definecolor{nodegreen}{HTML}{00A86B}
+        \definecolor{nodeyellow}{HTML}{FFB50F}
+        \definecolor{nodered}{HTML}{D32F2F}
         \begin{scope}[every node/.style={circle,thick,draw}]
             \clip (-1.1,-1.1) rectangle (-0.34,1.1);
-            \node[minimum size=2cm, fill=green] (A) at (0,0) {};
+            \node[minimum size=2cm, fill=nodegreen] (A) at (0,0) {};
         \end{scope}
         \begin{scope}[every node/.style={circle,thick,draw}]
             \clip (-0.34,-1.1) rectangle (0.32,1.1);
-            \node[minimum size=2cm, fill=red] (B) at (0,0) {};
+            \node[minimum size=2cm, fill=nodeyellow] (B) at (0,0) {};
         \end{scope}
         \begin{scope}[every node/.style={circle,thick,draw}]
             \clip (0.32,-1.1) rectangle (1.1,1.1);
-            \node[minimum size=2cm, fill=yellow] (C) at (0,0) {};
+            \node[minimum size=2cm, fill=nodered] (C) at (0,0) {};
         \end{scope}
 
         % \draw (A) +(0,0.25) node[above] {Industrie};
