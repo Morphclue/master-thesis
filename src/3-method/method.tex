@@ -26,7 +26,7 @@ Ebenfalls ist die Unterteilung in unterschiedliche Rechtfertigung (positiv, nega
 
 \subsection{Prototyp - Begriffsverband}
 Im Rahmen der Masterarbeit wurde ein Prototyp entwickelt, welcher die Ergebnisse der Vorstudie aufgreift und weiterentwickelt.
-Er ist somit eine weitere Iteration auf dem Weg zur finalen Umsetzung. 
+Er ist somit eine weitere Iteration auf dem Weg zur finalen Umsetzung.
 Dieser Abschnitt erläutert möglichst detailliert die einzelnen Schritte, welche zum Prototypen geführt haben.\\
 
 \begin{figure}[!ht]
@@ -134,6 +134,38 @@ Die Verteilung der Farben ist also gleichmäßig.
 Ein Beispiel hierfür wären neun Artikel, wovon jeweils drei Artikel sich positiv, negativ und neutral rechtfertigen.
 In der Realität ist es jedoch sehr unwahrscheinlich, dass die Verteilung der Farben in einem Knoten immer gleichmäßig ist.
 Viel eher wird es Verhältnisse geben, bei denen eine Farbe überwiegt und andere Farben nur in geringem Maße oder gar nicht vorkommen.\\
+
+% Knotendarstellung
+Es gibt viele verschiedene Möglichkeiten, wie die Knoten innerhalb eines Begriffsverbands dargestellt werden können.
+In der Literatur werden die Knoten jedoch meistens nur als Kreise dargestellt, welche Beschriftungen über und unter sich tragen.
+In der Vorstudie wurde eine ähnliche Darstellung verwendet.
+Die Knoten wurden in zwei Hälften geteilt, wobei die obere Hälfte Welten aus den \ac{EC} und die untere Hälfte die jeweiligen Artikel repräsentiert.
+Dabei können mehrere Welten und Artikel in einem Knoten liegen.
+Falls der Knoten explizit zu einer oder mehreren Welten gehört, dann wird der obere Halbkreis blau eingefärbt.
+Falls Artikel innerhalb eines Knotens liegen, dann wird der untere Halbkreis gelb eingefärbt. \textcolor{red}{Gibt es einen Grund für die Farben?}
+Zusätzlich dazu wird am Knoten eine Zahl angegeben, welche aufsummiert angeben soll wie viele Artikel innerhalb dieses und den darunterliegenden Knoten liegen.
+Diese Summe wird auch in der Literatur verwendet, jedoch tritt diese Summe nicht in Kombination mit den konkreten Gegenständen auf.
+Die Gegenstände werden erst aufgelistet, sobald eine Interaktion mit einem entsprechenden Knoten erfolgt. \\
+
+% Zeichensatz
+Das Problem an dieser Darstellung ist, dass permanent alle Artikel für die Nutzenden angezeigt werden.
+Dies sorgt für zusätzliches Rauschen und lenkt die Aufmerksamkeit auf die dargestellten Artikel, da diese wesentlich mehr Text ausmachen als die Welten.
+Konkret werden 83 Zeichen für die Welten verwendet.
+Für die Artikel werden 419 Zeichen verwendet.
+Bei insgesamt 502 Zeichen machen die Artikel $83,47\%$ des Gesamttextes aus.
+Um ein Bewusstsein für die eigene Filterblase zu lenken, darf der Fokus jedoch nicht auf den Artikeln liegen.
+Der Fokus sollte auf den Welten liegen, da diese eine Perspektive auf ein gegebenes Thema darstellen.\\
+
+% Neues Design
+Aus diesem Grund wurden im neuen Design Knoten verwendet, welche nur Beschriftungen für die Welten und die Anzahl der Artikel enthalten.
+Die Artikel werden stattdessen erst aufgelistet, wenn Nutzende mit dem Knoten interagieren.
+Dieses Design hat mehrere Vorteile.
+Zum einen wird der dargestellte Text für Nutzende deutlich kürzer.
+Dies führt zu einer besseren Lesbarkeit und reduziert die hohe Komplexität beim ersten Betrachten des Graphen.
+Statt mit einer großen Menge an Informationen konfrontiert zu werden, können Nutzende sich zunächst auf die Welten und die Verknüpfungen zwischen diesen konzentrieren.
+Zum anderen wird eine bewusste Entscheidung für eine Perspektive auf ein Thema erzwungen.
+Nutzende müssen sich bewusst für eine Welt entscheiden, um die Artikel dieser Welt einsehen zu können.
+Dies führt zwar auch dazu, dass Nutzende mehr Klicks benötigen, um die gewünschten Artikel zu erreichen, jedoch überwiegen genannten Vorteile. \\
 
 % Versuchsaufbau
 % Adobe XD
