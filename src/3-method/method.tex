@@ -24,3 +24,55 @@ Der Begriffsverband wies für drei Personen eine hohe Komplexität auf.
 Diese sorgt dafür, dass entweder eine lange Einarbeitungszeit nötig ist oder Nutzende abgeschreckt werden.
 Ebenfalls ist die Unterteilung in unterschiedliche Rechtfertigung (positiv, negativ oder beides) bezüglich einer Welt für zwei Personen eher verwirrend als sinnvoll.\\
 
+\begin{figure}[!ht]
+    \centering
+    \begin{tikzpicture}
+        % Erster Graph
+        \begin{scope}[every node/.style={circle,thick,draw}]
+            \node (A) at (0,1) {};
+            \node (B) at (-2,-1) {};
+            \node (C) at (2,-1) {};
+            \node (D) at (0, -3) {};
+        \end{scope}
+
+        % Merkmale
+        \draw (A) +(0,0.25) node[above] {Industrie};
+        \draw (B) +(0,0.25) node[above, align=left] {Industrie \texttt{+}};
+        \draw (C) +(0,0.25) node[above, align=left] {Industrie -};
+        \draw (D) +(0,0.25) node[above, align=left] {};
+
+        % Relationen
+        \draw (A) -- (B);
+        \draw (A) -- (C);
+        \draw (B) -- (D);
+        \draw (C) -- (D);
+
+        % Zweiter Graph
+        \begin{scope}[every node/.style={circle,thick,draw}, xshift=5cm]
+            \node (A2) at (2,-1) {};
+        \end{scope}
+
+        % Merkmale
+        \draw (A2) +(0,0.25) node[above] {Industrie};
+
+        % Unsichtbare Koordinaten für den Pfeil
+        \coordinate[right=1.5cm of C] (C_right);
+        \coordinate[left=1.5cm of A2] (A2_left);
+
+        % Pfeil zwischen den Graphen
+        \draw[-{Stealth[length=3mm]}, thick] (C_right) -- (A2_left);
+    \end{tikzpicture}
+    \caption{Begriffsverband - Vorstudie (links) und vereinfachte Darstellung (rechts)}
+    \label{fig:industry-comparison}
+\end{figure}
+
+% Graph
+Im Rahmen der Masterarbeit wurde ein Prototyp entwickelt, welcher die Ergebnisse der Vorstudie aufgreift und weiterentwickelt.
+Die hohe Komplexität wurde dadurch reduziert, dass die Anzahl der Elemente im Begriffsverband reduziert wurden.
+Da für zwei Personen die Unterteilung in positiv, negativ oder beides verwirrend war, wurden diese Knoten aus dem Begriffsverband entfernt.
+Dies wird in \autoref{fig:industry-comparison} beispielhaft dargestellt.
+Der Knoten Industrie besitzt in der Vorstudie zwei weitere Nachfolgeknoten, welche eine positive und negative Rechtfertigung für die Welt Industrie darstellen.
+Der unterste Knoten vereinigt die Eigenschaften aller darüberliegenden Knoten.
+Auf diese Weise gehören Artikel, welche im untersten Knoten liegen zu der Welt Industrie und rechtfertigen sich positiv und negativ bezüglich dieser Welt.\\
+
+% Graph kleiner, aber Infos gehen verloren
