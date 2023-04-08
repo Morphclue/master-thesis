@@ -82,19 +82,21 @@ Auf diese Weise gehören Artikel, welche im untersten Knoten liegen zu der Welt 
         \definecolor{nodeyellow}{HTML}{FFB50F}
         \definecolor{nodered}{HTML}{D32F2F}
         \begin{scope}[every node/.style={circle,thick,draw}]
-            \clip (-1.1,-1.1) rectangle (-0.34,1.1);
+            \clip (-1.1,0) rectangle (-0.34,1.1);
             \node[minimum size=2cm, fill=nodegreen] (A) at (0,0) {};
         \end{scope}
         \begin{scope}[every node/.style={circle,thick,draw}]
-            \clip (-0.34,-1.1) rectangle (0.32,1.1);
+            \clip (-0.34,0) rectangle (0.32,1.1);
             \node[minimum size=2cm, fill=nodeyellow] (B) at (0,0) {};
         \end{scope}
         \begin{scope}[every node/.style={circle,thick,draw}]
-            \clip (0.32,-1.1) rectangle (1.1,1.1);
+            \clip (0.32,0) rectangle (1.1,1.1);
             \node[minimum size=2cm, fill=nodered] (C) at (0,0) {};
         \end{scope}
 
-        % \draw (A) +(0,0.25) node[above] {Industrie};
+        \coordinate[right=0cm of A] (A_right);
+        \coordinate[left=0cm of A] (A_left);
+        \draw[-, thick] (A_left) -- (A_right);
     \end{tikzpicture}
     \caption{Einfärbung des Knotens Industrie}
     \label{fig:industry-colored}
