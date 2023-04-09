@@ -407,6 +407,26 @@ Der Apfel ist ein pflanzliches Nahrungsmittel, jedoch kein Getreide.
 Der Rindfleischburger besitzt alle vier aufgeführten Merkmale.
 Das liegt daran, dass er sowohl aus tierischen als auch pflanzlichen Nahrungsmitteln (in diesem Fall unter anderem auch aus Getreide) besteht.\\
 
+Um die Beziehungen der in \autoref{table:fca-food} aufgeführten Daten besser zu verstehen, werden die Begriffe Umfang (Extension) und Inhalt (Intension) eingeführt.
+Der Begriff Umfang beschreibt die Gruppe von Nahrungsmitteln, welche dieselben Merkmale aufweisen.
+In dieser Tabelle wäre der Umfang von pflanzliche Nahrungsmittel die Gruppe, welche die Gegenstände Apfel, Weizen und Hafer enthält.
+Der Inhalt wiederum bezieht sich auf die Gruppe von Merkmalen, welche einen Gegenstand charakterisieren.
+In diesem Fall wäre der Inhalt von Apfel die Gruppe von Merkmalen: pflanzliche Nahrungsmittel und Nahrungsmittel.\\
+
+Mathematisch gesehen ist ein formaler Kontext ein Tripel $K = (G, M, I)$, wobei $G$ die Menge der Gegenstände, $M$ die Menge der Merkmale und $I$ die Inzidenzrelation für Elemente aus $G$ und $M$ ist.
+Eine Inzidenzrelation ist eine binäre Relation, welche angibt, ob ein Gegenstand ein Merkmal aufweist.
+Sie besteht aus einem Tupel $\{(g,m) \mid g \in G, m \in M\}$ und bildet die Teilmenge des kartesischen Produkts $G \times M$.
+Für eine Teilmenge von Merkmalen $A \subseteq M$ kann ein Umfang $A'$ berechnet werden mit $A' = \{g \in G \mid (g,m) \in I\ \forall m \in A\}$.
+Für den Inhalt $B \subseteq G$ gilt $B' = \{m \in M \mid (g,m) \in I\ \forall g \in B\}$. \\
+
+Anhand von \autoref{table:fca-food} können diese mathematischen Begriffe nun veranschaulicht werden.
+Der formale Begriff mit dem Merkmal pflanzliche Nahrungsmittel kann als $A = \{Pflanzliche\ Nahrungsmittel\}$ definiert werden.
+Der Umfang von $A$ sind dann alle Gegenstände, welche das Merkmal pflanzliche Nahrungsmittel aufweisen.
+In diesem Fall wäre der Umfang $A' = \{Apfel, Weizen, Hafer, Rindfleischburger\}$.
+Ebenso kann der Inhalt von $B = \{Apfel\}$ näher untersucht werden.
+Der Inhalt von $B$ sind alle Merkmale, welche den Gegenstand Apfel beschreiben.
+Konkret wäre der Inhalt für den Gegenstand Apfel $B' = \{Pflanzliche\ Nahrungsmittel, Nahrungsmittel\}$.
+
 \begin{figure}[!ht]
     \centering
     \begin{tikzpicture}
