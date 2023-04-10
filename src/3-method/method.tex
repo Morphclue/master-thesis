@@ -272,6 +272,62 @@ Eine Studie zeig, dass gamifizierte Lernvideos mit interaktiven Inhalten die Mot
 Genau diese Eigenschaften sollen im Tutorial des Prototyps zum Einsatz kommen.
 Testpersonen sollen motiviert werden, sich mit dem System auseinanderzusetzen und dabei soll der Lernerfolg möglichst optimal sein.\\
 
+% Aufbau
+Das Tutorial besteht prinzipiell aus drei Teilen.
+Im ersten Teil werden einige Prinzipien der \ac{FBA} erläutert.
+Im zweiten Teil werden grundlegende Konzepte der \ac{EC} erläutert.
+Der dritte Teil beinhaltet die Verknüpfung beider Konzepte.
+Die einzelnen Teile des Tutorials werden im Folgenden erläutert.\\
+
+\begin{figure}[!ht]
+    \centering
+    \begin{tikzpicture}
+        \begin{scope}[every node/.style={circle,thick,draw}]
+            \node (A) at (2,8) {};
+            \node (B) at (4,6) {};
+            \node (C) at (2,4) {};
+            \node (D) at (6,4) {};
+            \node (E) at (4,2) {};
+        \end{scope}
+
+        % Merkmale
+        \draw (A) +(0,0.25) node[above] {Tier};
+        \draw (B) +(0,0.25) node[above] {Säugetier};
+        \draw (C) +(0,0.25) node[above] {Fleischfresser};
+        \draw (D) +(0,0.25) node[above] {Pflanzenfresser};
+
+        % Gegenstände
+        \draw (A) +(0,-0.25) node[below] {Barsch};
+        \draw (C) +(0,-0.25) node[below] {Wolf};
+        \draw (D) +(0,-0.25) node[below, align=left] {Hase\\ Kuh};
+        \draw (E) +(0,-0.25) node[below] {Schwein};
+
+        % Relationen
+        \draw (A) -- (B);
+        \draw (B) -- (C);
+        \draw (B) -- (D);
+        \draw (C) -- (E);
+        \draw (D) -- (E);
+    \end{tikzpicture}
+    \caption{\label{fig:begriffsverband-tiere}Begriffsverband - Tiere}
+\end{figure}
+
+% Erster Teil 
+Um die Testpersonen mit den Prinzipen der \ac{FBA} vertraut zu machen wurden möglichst simple Beispiel gewählt.
+Der erste Begriffsverband besteht aus der Kategorisierung von Tieren.
+Dabei bekommen die Teilnehmenden zunächst die Aufgabe einen Gegenstand der Kategorie Säugetier zuzuordnen.
+Im Tutorial werden Teilnehmenden durch Zusprüche bei einer korrekten Antwort wie \glqq Super!\grqq{} oder \glqq Richtig!\grqq{} belohnt.
+Bei einer falschen Antwort werden die Testpersonen über ihren Fehler aufgeklärt und dazu motiviert es erneut zu versuchen.
+Die nächste Aufgabe besteht darin, dass die Teilnehmenden einen Gegenstand finden müssen, welcher nicht zur Kategorie der Säugetiere gehört.
+In diesem Schritt lernen die Testpersonen, dass es unterschiedliche Kategorien gibt und dass Gegenstände existieren, welche nicht zu einer Kategorie gehören.
+Im Anschluss lernen die Teilnehmenden in den nächsten Schritten die unterschiedlichen Relationen zwischen Kategorien kennen.
+Dabei werden die Testpersonen zunächst nur mit einfachen Relationen konfrontiert.
+Am Ende des ersten Abschnitts sehen die Teilnehmenden den Begriffsverband in der Abbildung \ref{fig:begriffsverband-tiere}.
+Dieser Begriffsverband zeigt die wichtigsten Konzepte der \ac{FBA} auf, welche für die Navigation mit dem Prototyp benötigt werden.
+Es existiert ein Knoten ohne Gegenstände, Knoten mit ein oder mehreren Gegenständen und ein Knoten ohne ein explizites Merkmal.
+Aufgaben fragen im letzten Schritt dieses Abschnitts die Testpersonen nach ihrem Verständnis zu ihren erlernten Kenntnissen.
+Dafür wird der Begriffsverband aus \autoref{fig:begriffsverband} verwendet, da dieser ebenfalls die wichtigsten Konzepte der \ac{FBA} beinhaltet.
+
 \subsubsection{AttrakDiff}
 \subsubsection{QUESI}
 \subsubsection{Eigener Fragebogen}
