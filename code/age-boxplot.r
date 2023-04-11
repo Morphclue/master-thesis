@@ -10,7 +10,8 @@ ggplot(data, aes(x = factor(Person > 8), y = Alter, fill = factor(Person > 8))) 
                     labels = c("Vorstudie", "Masterarbeit")) +
   scale_x_discrete(labels=c("Vorstudie", "Masterarbeit")) +
   labs(x = "Datensatz", y = "Alter") +
-  theme_bw()
+  theme_bw() +
+  coord_flip()
 
 study <- subset(data, Person <= 8)
 summary(study$Alter)
