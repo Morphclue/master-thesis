@@ -1,9 +1,6 @@
 if (!require('pacman')) install.packages('pacman')
 p_load(pacman, proxy, ggplot2, reshape2, tidyr, dplyr)
 
-articles <- read.csv("./code/list-articles.csv", sep = ";", header = TRUE, check.names = FALSE, encoding = "UTF-8")
-persons <- read.csv("./code/list-persons.csv", sep = ";", header = TRUE, check.names = FALSE, encoding = "UTF-8")
-
 hamming_distance <- function(a, b) {
   return(sum(a != b))
 }
