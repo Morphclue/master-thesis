@@ -359,73 +359,72 @@ Es sei angemerkt, dass es noch weitere Welten gibt, welche die \ac{EC} erweitern
 Diese werden in dieser Arbeit jedoch nicht betrachtet.
 
 \subsection{Formale Begriffsanalyse}
-Die \ac{FBA} ist eine mathematische Methode, welche es ermöglicht gegebene Datenmengen mithilfe von Strukturen zu visualisieren \cite{formale-begriffsanalyse, formal-concept-analysis-wille}.
-Dabei werden die Daten wie in Form eines Hasse-Diagramms dargestellt \cite{introduction-lattices}.
-Die \ac{FBA} definiert eine Menge von Gegenständen und Merkmalen.
-Gegenstände können als eine Art Kategorisierung von Daten verstanden werden.
-Während die Merkmale die Eigenschaften der Gegenstände beschreiben.
-Knoten werden dabei in Relationen zu anderen Knoten gemäß der Regeln der Halbordnung gesetzt.
-Das bedeutet, dass die Knoten folgende Eigenschaften besitzen:
-\begin{alignat*}{2}
-     & x\leq x              &                & \quad\text{(reflexiv)}            \\
-     & x\leq y\land y\leq x & \Rightarrow \; & x=y \quad\text{(antisymmetrisch)} \\
-     & x\leq y\land y\leq z & \Rightarrow \; & x\leq z \quad\text{(transitiv)}
-\end{alignat*}
+Die \ac{FBA} ist ein mathematischer Formalismus, welcher es ermöglicht gegebene Daten auf hierarchische relationale Zusammenhänge zu analysieren \cite{formale-begriffsanalyse, formal-concept-analysis-wille}.
+Ein formaler Kontext ist ein Tripel $\mathbb{K} \coloneqq (G, M, I)$, wobei $G$ die Menge der Gegenstände, $M$ die Menge der Merkmale und die Menge der Inzidenzrelationen $I \subseteq G \times M$ definiert.
+Gegenstände können als Kategorisierung von Daten verstanden werden, während Merkmale die Eigenschaften der Gegenstände beschreiben.
+Eine Inzidenzrelation ist eine binäre Relation, welche angibt, ob ein Gegenstand ein Merkmal aufweist.
+Sie besteht aus Tupeln der Form $(g,m)$ mit $g \in G$ und $m \in M$.
+Ein formaler Begriff des Kontextes $\mathbb{K}$ ist ein Tupel $(A,B)$, wobei $A \subseteq G$ und $B \subseteq M$.
+Die Ableitung von $A$ ist definiert als $A' \coloneqq \{m \in M \mid \forall g \in A, (g,m) \in I\}$.
+$A'$ ist der Inhalt (Extent) von $A$.
+Analog kann für Teilmenge $B$ der Umfang (Intent) $B'$ bestimmt werden mit $B' \coloneqq \{g \in G \mid \forall m \in B, (g,m) \in I\}$.
+Für einen formalen Begriff gilt, dass $A = B'$ und $B = A'$.\\
 
-Zwischen den Knoten bestehen in der \ac{FBA} hierarchische Beziehungen.
-Das bedeutet, dass der Knoten $x$ unterhalb des Knotens $y$ liegt, wenn $x \leq y$ gilt.
-
-\begin{center} % Todo multirow for table header
+\begin{center}
     \begin{table}[!ht]
         \centering
         \resizebox{\textwidth}{!}{
-            \begin{tabular}{|l|c|c|c|c|}
+            \begin{tabular}{|l||c|c|c|c|}
                 \hline
-                \tikz{\node[below left, inner sep=1pt] (Gegenstand) {\textbf{Gegenstand}};%
-                    \node[above right,inner sep=1pt] (Merkmal) {\textbf{Merkmal}};%
-                \draw (Gegenstand.north west|-Merkmal.north west) -- (Gegenstand.south east-|Merkmal.south east);} & Nahrungsmittel & Pflanzliche Nahrungsmittel & Tierische Nahrungsmittel & Getreide \\ \hline
-                Apfel                                                                                              & X              & X                          &                          &          \\ \hline
-                Rindfleisch                                                                                        & X              &                            & X                        &          \\ \hline
-                Weizen                                                                                             & X              & X                          &                          & X        \\ \hline
-                Hafer                                                                                              & X              & X                          &                          & X        \\ \hline
-                Rindfleischburger                                                                                  & X              & X                          & X                        & X        \\ \hline
+                                  & Nahrungsmittel & Pflanzliche Nahrungsmittel & Tierische Nahrungsmittel & Getreide \\ \hline \hline
+                Apfel             & $\times$       & $\times$                   &                          &          \\ \hline
+                Rindfleisch       & $\times$       &                            & $\times$                 &          \\ \hline
+                Weizen            & $\times$       & $\times$                   &                          & $\times$ \\ \hline
+                Hafer             & $\times$       & $\times$                   &                          & $\times$ \\ \hline
+                Rindfleischburger & $\times$       & $\times$                   & $\times$                 & $\times$ \\ \hline
             \end{tabular}
         }
-        \caption{Formaler Kontext - Nahrungsmittel}
+        \caption{Kreuztabelle - Nahrungsmittel}
         \label{table:fca-food}
     \end{table}
 \end{center}
 
-\autoref{table:fca-food} zeigt beispielhaft eine Tabelle mit Daten bestehend aus Gegenständen und Merkmalen.
-Diese Abbildung wird als formaler Kontext bezeichnet.
-Dabei bedeutet ein X, dass der Gegenstand und das Merkmal in Relation stehen.
-Jeder der aufgeführten Gegenstände ist ein Nahrungsmittel.
-Dabei wird unterschieden zwischen pflanzlichen und tierischen Nahrungsmitteln.
-Ebenfalls gibt es zusätzlich das Merkmal Getreide.
-Dabei ist jedes Getreide ein pflanzliches Nahrungsmittel.
-Der Apfel ist ein pflanzliches Nahrungsmittel, jedoch kein Getreide.
-Der Rindfleischburger besitzt alle vier aufgeführten Merkmale.
-Das liegt daran, dass er sowohl aus tierischen als auch pflanzlichen Nahrungsmitteln (in diesem Fall unter anderem auch aus Getreide) besteht.\\
+% Tabelle & Implikation
+\autoref{table:fca-food} zeigt beispielhaft die Visualisierung eines formalen Kontextes $\mathbb{K}$ in Form einer Kreuztabelle.
+In dieser Tabelle sind die Gegenstände als Zeilen und die Merkmale als Spalten beschriftet.
+Ein Kreuz $\times$ gibt an, ob ein Gegenstand ein Merkmal aufweist.
+Also, ob ein Tupel der Form $(g,m)$ in der Menge der Inzidenzrelationen $I$ enthalten liegt.
+Der Gegenstand Weizen besitzt drei Inzidenzrelationen.
+Er steht jeweils mit den Merkmalen Nahrungsmittel, pflanzliche Nahrungsmittel und Getreide in Relation.
+Betrachtet man die Kreuztabelle näher, so fällt auf, dass alle Gegenstände, welche das Merkmal Getreide aufweisen, auch das Merkmal pflanzliche Nahrungsmittel aufweisen.
+Dies ist ein Beispiel für eine Implikation zwischen Merkmalen.
+Dabei gilt für zwei Mengen von Merkmalen $M_1, M_2 \subseteq M$, dass $M_1\implies M_2 \coloneqq M_1' \subseteq M_2'$.\\
 
-Um die Beziehungen der in \autoref{table:fca-food} aufgeführten Daten besser zu verstehen, werden die Begriffe Umfang (Extension) und Inhalt (Intension) eingeführt.
-Der Begriff Umfang beschreibt die Gruppe von Nahrungsmitteln, welche dieselben Merkmale aufweisen.
-In dieser Tabelle wäre der Umfang von pflanzliche Nahrungsmittel die Gruppe, welche die Gegenstände Apfel, Weizen, Hafer und Rindfleischburger enthält.
-Der Inhalt wiederum bezieht sich auf die Gruppe von Merkmalen, welche einen Gegenstand charakterisieren.
-In diesem Fall wäre der Inhalt von Apfel die Gruppe von Merkmalen: pflanzliche Nahrungsmittel und Nahrungsmittel.\\
-
-Mathematisch gesehen ist ein formaler Kontext ein Tripel $K = (G, M, I)$, wobei $G$ die Menge der Gegenstände, $M$ die Menge der Merkmale und $I$ die Inzidenzrelation für Elemente aus $G$ und $M$ ist.
-Eine Inzidenzrelation ist eine binäre Relation, welche angibt, ob ein Gegenstand ein Merkmal aufweist.
-Sie besteht aus einem Tupel $\{(g,m) \mid g \in G, m \in M\}$ und bildet die Teilmenge des kartesischen Produkts $G \times M$.
-Für eine Teilmenge von Merkmalen $A \subseteq M$ kann ein Umfang $A'$ berechnet werden mit $A' = \{g \in G \mid (g,m) \in I\ \forall m \in A\}$.
-Für den Inhalt $B \subseteq G$ gilt $B' = \{m \in M \mid (g,m) \in I\ \forall g \in B\}$. \\
-
-Anhand von \autoref{table:fca-food} können diese mathematischen Begriffe nun veranschaulicht werden.
-Der formale Begriff mit dem Merkmal pflanzliche Nahrungsmittel kann als $A = \{Pflanzliche\ Nahrungsmittel\}$ definiert werden.
-Der Umfang von $A$ sind dann alle Gegenstände, welche das Merkmal pflanzliche Nahrungsmittel aufweisen.
-In diesem Fall wäre der Umfang $A' = \{Apfel, Weizen, Hafer, Rindfleischburger\}$.
-Ebenso kann der Inhalt von $B = \{Apfel\}$ näher untersucht werden.
-Der Inhalt von $B$ sind alle Merkmale, welche den Gegenstand Apfel beschreiben.
-Konkret wäre der Inhalt für den Gegenstand Apfel $B' = \{Pflanzliche\ Nahrungsmittel, Nahrungsmittel\}$.
+% Beispiel & A'' = A
+Für ein besseres Verständnis der \ac{FBA} werden weitere Beispiele anhand der \autoref{table:fca-food} erläutert.
+Ein formaler Begriff des Kontextes $\mathbb{K}$ ist das Tupel $(A_1, B_1)$ mit:
+\begin{align}
+    A_1 & = \{Weizen, Hafer, Rindfleischburger\} \subseteq G                     \\
+    B_1 & = \{Nahrungsmittel, Pflanzliche\ Nahrungsmittel,Getreide\} \subseteq M
+\end{align}
+Für den Inhalt von $A_1'$ und dem Umfang von $B_1'$ gilt:
+\begin{align}
+    A_1' & = \{Nahrungsmittel, Pflanzliche\ Nahrungsmittel, Getreide\} \\
+    B_1' & = \{Weizen, Hafer, Rindfleischburger\}
+\end{align}
+Somit gilt die vorher erwähnte Definition für den formalen Begriff $A_1 = B_1'$ und $B_1 = A_1'$.
+Ebenfalls lässt sich durch die Ableitungen im Beispiel eine weitere Eigenschaft von Ableitungen erkennen.
+Für die Ableitung von $A'$ gilt $A'' = A$ und für $B$ gilt $B'' = B$.
+% TODO: check if correct
+Dies gilt jedoch nur für einen formalen Begriff.
+Für eine beliebige Teilmenge $A \subseteq G$ gilt $A \subseteq A''$ und für $B \subseteq M$ gilt $B \subseteq B''$.
+Dies lässt sich durch ein weiteres Beispiel verdeutlichen:
+\setcounter{equation}{0}
+\begin{align}
+    A_2   & = \{Weizen\}                                                \\
+    A_2'  & = \{Nahrungsmittel, Pflanzliche\ Nahrungsmittel, Getreide\} \\
+    A_2'' & = \{Weizen, Hafer, Rindfleischburger\}
+\end{align}
 
 \begin{figure}[!ht]
     \centering
@@ -461,82 +460,33 @@ Konkret wäre der Inhalt für den Gegenstand Apfel $B' = \{Pflanzliche\ Nahrungs
     \caption{\label{fig:begriffsverband}Begriffsverband - Nahrungsmittel}
 \end{figure}
 
-Die Daten aus \autoref{table:fca-food} können als ein Begriffsverband dargestellt werden.
-Dieser ist in \autoref{fig:begriffsverband} dargestellt und ist analog zu einem Hasse-Diagramm aufgebaut.
-Ein einzelner Knoten repräsentiert einen formalen Begriff.
-Dabei stehen die Knoten in einer hierarchischen Relation zueinander.
-Über dem Knoten werden die Merkmale und unter dem Knoten die Gegenstände aufgeführt.
-Im gegebenem Beispiel ist der Gegenstand Apfel unter dem Merkmal pflanzliche Nahrungsmittel zu finden.
-Da dieser Knoten unterhalb des Knotens Nahrungsmittel liegt, ist der Gegenstand Apfel ebenfalls ein Nahrungsmittel.
-Es existieren zusätzlich Knoten, welche keine Merkmale besitzen, sondern nur Gegenstände.
-In diesem Beispiel ist dies der Knoten mit dem Gegenstand Rindfleischburger.
-Das Merkmal dieses Knoten ist implizit durch die Merkmale der übergeordneten Knoten gegeben. \\
+% Begriffsverband
+Die Daten von \autoref{table:fca-food} können als Begriffsverband visualisiert werden.
+Dabei werden die gegebenen Daten als Liniendiagramm, wie in \autoref{fig:begriffsverband}, dargestellt. % TODO: cite? \cite{introduction-lattices}
+Im Liniendiagramm repräsentieren Knoten Relationen zwischen Merkmalen und Gegenständen.
+Über einem Knoten sind die Merkmale und unter einem Knoten die Gegenstände aufgeführt.
+Die Verbindung zwischen den Knoten repräsentiert die Implikationen von Merkmalen.
+Die Knoten werden dabei in Verbindung zu anderen Knoten gemäß der Regeln einer Ordnung gesetzt.
+Für diese gilt, dass die Knoten die folgenden Eigenschaften besitzen:
+\begin{align}
+    x \leq x \tag{reflexiv}                                       \\
+    x \leq y \land y \leq x \Rightarrow x=y \tag{antisymmetrisch} \\
+    x \leq y \land y \leq z \Rightarrow x\leq z \tag{transitiv}
+\end{align}
 
-\colorlet{mivertexcolor}{blue}
-\colorlet{jivertexcolor}{red}
-\colorlet{vertexcolor}{mivertexcolor!50}
-\colorlet{bordercolor}{black!80}
-\colorlet{linecolor}{gray}
-% parameter corresponds to the used valuation function and can be addressed by #1
-\tikzset{vertexbase/.style 2 args={semithick, shape=circle, inner sep=2pt, outer sep=0pt, draw=bordercolor},%
-    vertex/.style 2 args={vertexbase={#1}{}, fill=vertexcolor!45},%
-    mivertex/.style 2 args={vertexbase={#1}{}, fill=mivertexcolor!45},%
-    jivertex/.style 2 args={vertexbase={#1}{}, fill=jivertexcolor!45},%
-    divertex/.style 2 args={vertexbase={#1}{}, top color=mivertexcolor!45, bottom color=jivertexcolor!45},%
-    conn/.style={-, thick, color=linecolor}%
-}
-\begin{figure}
-    \centering
-    \begin{adjustbox}{max width=\textwidth}
-        \begin{tikzpicture}
-            \begin{scope} %for scaling and the like
-                \begin{scope} %draw vertices
-                    \foreach \nodename/\nodetype/\param/\xpos/\ypos in {%
-                            0/vertex//-0.9525641025641018/2.73846153846155,
-                            1/jivertex//-0.9102564102564106/6.306410256410267,
-                            2/jivertex//-5.155128205128204/7.194871794871805,
-                            3/jivertex//3.4333333333333336/7.378205128205138,
-                            4/jivertex//-2.6307692307692303/9.352564102564113,
-                            5/mivertex//3.546153846153846/11.073076923076933,
-                            6/mivertex//-0.7128205128205121/11.143589743589754,
-                            7/mivertex//-5.028205128205128/11.214102564102575,
-                            8/mivertex//-2.6589743589743584/13.132051282051293,
-                            9/vertex//-0.6282051282051277/14.598717948717958
-                        } \node[\nodetype={\param}{}] (\nodename) at (\xpos, \ypos) {};
-                \end{scope}
-                \begin{scope} %draw connections
-                    \path (8) edge[conn] (9);
-                    \path (3) edge[conn] (5);
-                    \path (3) edge[conn] (6);
-                    \path (5) edge[conn] (9);
-                    \path (0) edge[conn] (3);
-                    \path (0) edge[conn] (1);
-                    \path (0) edge[conn] (2);
-                    \path (1) edge[conn] (5);
-                    \path (1) edge[conn] (7);
-                    \path (2) edge[conn] (4);
-                    \path (2) edge[conn] (7);
-                    \path (4) edge[conn] (8);
-                    \path (4) edge[conn] (6);
-                    \path (7) edge[conn] (8);
-                    \path (6) edge[conn] (9);
-                \end{scope}
-                \begin{scope} %add labels
-                    \foreach \nodename/\labelpos/\labelopts/\labelcontent in {%
-                    5/above//{Grün},
-                    6/above//{Industrie},
-                    7/above//{Staat},
-                    8/above//{Markt},
-                    0/below//{\shortstack{Focus E-Fahrer (E-Auto Förderung 2021) \\ Focus (Neue Elektro-Studie unter der Lupe Jancke/Viehmann) \\ Focus E-Fahrer (Neue E-Auto-Förderung Tesla Tobias Stahl) \\ Focus E-Fahrer (Von wegen nur das Klima retten Tobias Stahl) \\ Focus E-Fahrer (Diesel soll 20 Cent teurer werden Reitberger) \\ Focus E-Fahrer (Rostoffe für E-Auto Akku Reitberger)}},
-                    1/below//{Focus (Harter Schlag für Hersteller Plug-in Prämie fällt weg)},
-                    2/below//{\shortstack{Focus E-Fahrer (autonom. Fahren Erfolg oder Flop?) \\ Focus E-Fahrer (Auch ohne Berlin-Werk: Schon heute verdient dt. Autoindustrie Kay)}},
-                    3/below//{Focus E-Fahrer (Deutlich sauberer als gedacht Tobias Stahl)},
-                    4/below//{\shortstack{Focus E-Fahrer (Stromverbrauch: So viel verbraucht ein E-Auto wirklich Siethoff) \\ Focus E-Fahrer (Lohnt sich E-Auto bei den Strompreisen noch?)}},
-                    6/below//{Focus E-Fahrer (Revolution oder Wegwerf-Auto? Viehmann)}
-                    } \coordinate[label={[\labelopts]\labelpos:{\labelcontent}}](c) at (\nodename);
-                \end{scope}
-            \end{scope}
-        \end{tikzpicture}
-    \end{adjustbox}
-    \caption{\label{fig:fba-artikel}Begriffsverband - Artikel}
-\end{figure}
+Zwischen den Knoten bestehen im Begriffsverband hierarchische Beziehungen.
+Das bedeutet, dass der Knoten $x$ unterhalb des Knotens $y$ liegt, wenn $x \leq y$ gilt.
+Dabei lassen sich grundsätzlich zwei Leserichtungen für das Liniendiagramm definieren.
+Die erste Leserichtung geht von unten nach oben und beschreibt einen Gegenstand $g$ durch die Merkmale, die erreicht werden können, wenn man den Linien im Diagramm nach oben folgt.
+Durch die zweite Leserichtung werden alle Gegenstände eines Merkmals $m$ aufgelistet, welche durch das Verfolgen der Linien im Diagramm von oben nach unten erreicht werden können.
+Sowohl die erste als auch die zweite Leserichtung können Knoten enthalten, welche nach oben oder unten mehrere Linien aufweisen.
+In diesem Fall werden beide Pfade verfolgt.
+Die erste und zweite Leserichtung ist dabei nichts anderes als Inhalt und Umfang für Gegenstand und Merkmal eines Knotens. \\
+
+Im Begriffsverband aus \autoref{fig:begriffsverband} ist der Gegenstand Apfel unter dem Merkmal pflanzliche Nahrungsmittel zu finden.
+Um den Inhalt dieses Knotens zu bestimmen wird der Pfad von Apfel nach oben verfolgt.
+Dabei werden beginnend vom Knoten mit dem Gegenstand Apfel die Merkmale pflanzliche Nahrungsmittel und Nahrungsmittel erreicht.
+Der Umfang dieses Knotens wird durch das Verfolgen des Pfades vom Merkmal pflanzliche Nahrungsmittel nach unten bestimmt.
+Dabei werden die nacheinander die Gegenstände Apfel, Weizen, Hafer und Rindfleischburger erreicht.
+Der Knoten mit dem Gegenstand Rindfleischburger ist ein Knoten, welcher kein explizites Merkmal besitzt.
+Die Merkmale werden in diesem Fall implizit durch die Merkmale der übergeordneten Knoten bestimmt. \\
