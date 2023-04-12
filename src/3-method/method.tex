@@ -55,6 +55,47 @@ In diesem Fall ist der Parameter, welcher die Relevanz bestimmt die Ähnlichkeit
 Die Ähnlichkeit wurde manuell definiert.
 Sie richtet sich danach, welche Welten der \ac{EC} den Artikel zugeordnet wurden.
 \textcolor{red}{Tabelle X gibt an...}
+\begin{table}
+    \centering
+    \newcolumntype{I}{>{\centering\arraybackslash}p{10pt}}
+    \newcommand{\x}{$\times$}
+    \newcommand{\unused}{\cellcolor{gray!60}}
+    \label{fig:data}
+    \resizebox{0.9\textwidth}{!}{
+        \begin{minipage}{0.5\linewidth}
+            \centering
+            \begin{tabular}{|l||I|I|I|I|I|I|I|I|}
+                \hline
+                   & \multicolumn{2}{c|}{Markt} & \multicolumn{2}{c|}{Industrie} & \multicolumn{2}{c|}{Staat} & \multicolumn{2}{c|}{Grün}                                    \\ \cline{2-9}
+                   & \texttt{+}                 & -                              & \texttt{+}                 & -                         & \texttt{+} & -  & \texttt{+} & - \\ \hline \hline
+                A1 & \x                         &                                & \x                         &                           & \x         &    & \x         &   \\ \hline
+                A2 & \x                         &                                &                            &                           &            &    &            &   \\ \hline
+                A3 & \x                         &                                & \x                         &                           & \x         &    & \x         &   \\ \hline
+                A4 & \x                         &                                & \x                         &                           &            & \x & \x         &   \\ \hline
+                A5 & \x                         &                                & \x                         &                           & \x         & \x & \x         &   \\ \hline
+                A6 &                            &                                & \x                         &                           &            &    &            &   \\ \hline
+                A7 & \x                         &                                & \x                         &                           & \x         &    & \x         &   \\ \hline
+            \end{tabular}
+        \end{minipage}
+        \quad
+        \quad
+        \begin{minipage}{0.5\linewidth}
+            \centering
+            \begin{tabular}{|l||I|I|I|I|I|I|I|I|}
+                \hline
+                        & \multicolumn{2}{c|}{Markt} & \multicolumn{2}{c|}{Industrie} & \multicolumn{2}{c|}{Staat} & \multicolumn{2}{c|}{Grün}                                    \\ \cline{2-9}
+                        & \texttt{+}                 & -                              & \texttt{+}                 & -                         & \texttt{+} & -  & \texttt{+} & - \\ \hline \hline
+                A8      & \x                         &                                & \x                         &                           &            &    &            &   \\ \hline
+                A9      & \x                         &                                & \x                         &                           & \x         &    & \x         &   \\ \hline
+                A10     & \x                         &                                & \x                         & \x                        &            & \x & \x         &   \\ \hline
+                A11     & \x                         &                                & \x                         &                           & \x         &    & \x         &   \\ \hline
+                A12     & \x                         &                                & \x                         &                           & \x         &    & \x         &   \\ \hline
+                A13     &                            &                                &                            & \x                        &            &    &            &   \\ \hline
+                \unused &                            &                                &                            &                           &            &    &            &   \\ \hline
+            \end{tabular}
+        \end{minipage}}
+    \caption{\label{fig:list-worlds}Liste - Welten \textcolor{red}{TODO}}
+\end{table}
 
 \subsection{Prototyp - Begriffsverband}\label{subsubsec:prototyp-2}
 Der zweite Prototyp greift die Ergebnisse der Vorstudie auf und entwickelt diese weiter.
@@ -427,6 +468,6 @@ Bei den Bildungsabschlüssen der Testpersonen wurde ebenfalls darauf geachtet, d
 Die Bildungsabschlüsse Fachoberschule und Abitur wurden zusammengefasst.
 Zusätzlich wurden die Bildungsabschlüsse Master und Diplom zusammengefasst.
 \autoref{fig:education} zeigt deutlich, dass die Vorstudie eine hohe Anzahl an Personen mit Hochschulabschluss aufweist.
-Dies spiegelt jedoch nicht die tatsächliche Verteilung der Bildungsabschlüsse in Deutschland wider \textcolor{red}{Abschlüsse DE}. 
+Dies spiegelt jedoch nicht die tatsächliche Verteilung der Bildungsabschlüsse in Deutschland wider \textcolor{red}{Abschlüsse DE}.
 Auch wenn beide Datensätze nicht als repräsentativ angesehen werden können, spielt die Verteilung der Bildungsabschlüsse eine wichtige Rolle für die Entwicklung des Prototyps.
 Das liegt daran, dass Bildungsabschlüsse oft mit verschiedenen Fähigkeiten einhergehen, welche bei der Entwicklung des Prototyps berücksichtigt werden müssen.
