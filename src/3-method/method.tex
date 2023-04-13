@@ -156,7 +156,10 @@ Da für zwei Personen die Unterteilung in positiv, negativ oder beides verwirren
 Dies wird in \autoref{fig:industry-comparison} beispielhaft dargestellt.
 Der Knoten Industrie besitzt in der Vorstudie zwei weitere Nachfolgeknoten, welche eine positive und negative Rechtfertigung für die Welt Industrie darstellen.
 Der unterste Knoten vereinigt die Eigenschaften aller darüberliegenden Knoten.
-Auf diese Weise gehören Artikel, welche im untersten Knoten liegen zu der Welt Industrie und rechtfertigen sich positiv und negativ bezüglich dieser Welt.\\
+Auf diese Weise gehören Artikel, welche im untersten Knoten liegen zu der Welt Industrie und rechtfertigen sich positiv und negativ bezüglich dieser Welt.
+Der aus der Reduktion resultierende Graph enthält statt der vier Knoten nur noch einen Knoten.
+Wenn man dies für den ganzen Graphen anwendet, dann kann der Graph der Vorstudie mit ursprünglich 14 Knoten auf fünf Knoten reduziert werden (siehe \autoref{sec:stuff} \autoref{fig:fba-smaller}).
+Der reduzierte Graph enthält jedoch auch weniger Informationen, da die Rechtfertigungen für die unterschiedlichen Welten nicht mehr dargestellt werden.\\
 
 \begin{figure}[!ht]
     \centering
@@ -186,14 +189,9 @@ Auf diese Weise gehören Artikel, welche im untersten Knoten liegen zu der Welt 
 \end{figure}
 
 % Knotenfärbung
-Der aus der Reduktion resultierende Graph enthält statt der vier Knoten nur noch einen Knoten.
-Wenn man dies für den ganzen Graphen anwendet, dann kann der Graph der Vorstudie mit ursprünglich 14 Knoten auf fünf Knoten reduziert werden (siehe Anhang \autoref{fig:fba-smaller}).
-Der reduzierte Graph enthält jedoch auch weniger Informationen, da die Rechtfertigungen für die unterschiedlichen Welten nicht mehr dargestellt werden.
 Um diesem Problem entgegenzuwirken, wurde die Repräsentation des Knotens aus \autoref{fig:industry-comparison} um drei Farben erweitert.
 Diese Farben werden in \autoref{fig:industry-colored} dargestellt.
-Die Farben sollen angeben, ob die Artikel sich innerhalb dieses Knotens positiv (grün), negativ (rot) oder positiv und negativ (gelb) rechtfertigen.\\
-
-% Drei Farben
+Die Farben sollen angeben, ob die Artikel sich innerhalb dieses Knotens positiv (grün), negativ (rot) oder positiv und negativ (gelb) rechtfertigen.
 Diese drei Farben wurden ausgewählt, weil sie für die meisten Menschen auf dieselbe Weise emotional assoziiert werden.
 So zeigen die Daten einer Studie, dass, aus der Menge der Grundfarbtöne, die Farbe Grün am positivsten und Rot am negativsten assoziiert wird \cite{color-emotion}.
 Ebenfalls sind Grün und Rot Komplementärfarben, welche zwei Gegenpole darstellen sollen.
