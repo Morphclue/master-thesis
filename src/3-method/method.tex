@@ -60,7 +60,6 @@ Dadurch wird ein content-based \ac{RS} simuliert, welches die Artikel bezüglich
     \newcolumntype{I}{>{\centering\arraybackslash}p{10pt}}
     \newcommand{\x}{$\times$}
     \newcommand{\unused}{\cellcolor{gray!60}}
-    \label{fig:data}
     \resizebox{0.9\textwidth}{!}{
         \begin{minipage}{0.5\linewidth}
             \centering
@@ -297,6 +296,53 @@ Da die Beschriftung der Merkmale in Form von Welten weiterhin im neuen Prototype
 Das Einzige, was wiederum wegfällt, ist die Anzeige der Artikel im Graphen.
 Da eine Interaktion mit dem oberen Halbkreis bereits dazu führt, dass alle unterliegenden Artikel angezeigt werden, kam die Idee auf, dass eine Interaktion mit dem unteren Halbkreis dazu führen sollte, dass nicht erneut alle Artikel angezeigt werden.
 Stattdessen beschränkt sich die Liste auf die Artikel, welche in der ausgewählten Welt vorkommen. \\
+
+% Tabelle + Graph
+\begin{table}
+    \centering
+    \newcolumntype{I}{>{\centering\arraybackslash}p{10pt}}
+    \newcommand{\x}{$\times$}
+    \newcommand{\unused}{\cellcolor{gray!60}}
+    \resizebox{0.9\textwidth}{!}{
+        \begin{minipage}{0.5\linewidth}
+            \centering
+            \begin{tabular}{|l||I|I|I|I|I|I|I|I|}
+                \hline
+                   & \multicolumn{2}{c|}{Markt} & \multicolumn{2}{c|}{Industrie} & \multicolumn{2}{c|}{Staat} & \multicolumn{2}{c|}{Grün}                                     \\ \cline{2-9}
+                   & \texttt{+}                 & -                              & \texttt{+}                 & -                         & \texttt{+} & -  & \texttt{+} & -  \\ \hline \hline
+                A1 & \x                         &                                &                            &                           & \x         &    & \x         &    \\ \hline
+                A2 & \x                         &                                & \x                         & \x                        & \x         & \x & \x         & \x \\ \hline
+                A3 & \x                         &                                & \x                         &                           &            &    &            &    \\ \hline
+                A4 & \x                         &                                & \x                         &                           & \x         &    & \x         &    \\ \hline
+                A5 & \x                         &                                & \x                         &                           & \x         &    & \x         &    \\ \hline
+                A6 & \x                         &                                & \x                         &                           &            &    &            &    \\ \hline
+                A7 & \x                         &                                & \x                         &                           & \x         &    &            &    \\ \hline
+            \end{tabular}
+        \end{minipage}
+        \quad
+        \quad
+        \begin{minipage}{0.5\linewidth}
+            \centering
+            \begin{tabular}{|l||I|I|I|I|I|I|I|I|}
+                \hline
+                        & \multicolumn{2}{c|}{Markt} & \multicolumn{2}{c|}{Industrie} & \multicolumn{2}{c|}{Staat} & \multicolumn{2}{c|}{Grün}                                    \\ \cline{2-9}
+                        & \texttt{+}                 & -                              & \texttt{+}                 & -                         & \texttt{+} & -  & \texttt{+} & - \\ \hline \hline
+                A8      & \x                         &                                & \x                         &                           & \x         &    &            &   \\ \hline
+                A9      & \x                         &                                & \x                         &                           &            & \x & \x         &   \\ \hline
+                A10     & \x                         &                                & \x                         &                           & \x         &    & \x         &   \\ \hline
+                A11     &                            &                                & \x                         &                           &            &    & \x         &   \\ \hline
+                A12     & \x                         &                                & \x                         &                           & \x         &    & \x         &   \\ \hline
+                A13     &                            &                                & \x                         & \x                        &            &    &            &   \\ \hline
+                \unused &                            &                                &                            &                           &            &    &            &   \\ \hline
+            \end{tabular}
+        \end{minipage}}
+    \caption{\label{table:fca-worlds}Kreuztabelle - Welten im Begriffsverband-Prototyp}
+\end{table}
+
+Ähnlich wie bei der Tabelle in \autoref{table:list-worlds} wurde auch für diesen Prototyp eine Kreuztabelle erstellt.
+\autoref{table:fca-worlds} zeigt die 13 verschiedenen Artikel, welche im Prototypen verwendet wurden.
+Mithilfe dieser Kreuztabelle wurde der Begriffsverband mit einem Tool des Fachgebiets Wissensverarbeitung (KDE) erstellt.
+Das daraus resultierende Liniendiagramm ist in \autoref{sec:stuff} \autoref{fig:fba-masterthesis} zu sehen.
 
 \subsection{Tutorial}
 Ein neues System einzuführen ist immer mit einem gewissen Lernaufwand verbunden.
