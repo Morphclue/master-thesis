@@ -55,16 +55,16 @@ Für den Inhalt von $A_1'$ und dem Umfang von $B_1'$ gilt:
 Somit gilt die vorher erwähnte Definition für den formalen Begriff $A_1 = B_1'$ und $B_1 = A_1'$.
 Ebenfalls lässt sich durch die Ableitungen im Beispiel eine weitere Eigenschaft von Ableitungen erkennen.
 Für die Ableitung von $A'$ gilt $A'' = A$ und für $B$ gilt $B'' = B$.
-% TODO: check if correct
 Dies gilt jedoch nur für einen formalen Begriff.
-Für eine beliebige Teilmenge $A \subseteq G$ gilt $A \subseteq A''$ und für $B \subseteq M$ gilt $B \subseteq B''$.
-Dies lässt sich durch ein weiteres Beispiel verdeutlichen:
+Verdeutlichen lässt sich durch ein weiteres Beispiel:
 \setcounter{equation}{0}
 \begin{align}
     A_2   & = \{Weizen\}                                                \\
     A_2'  & = \{Nahrungsmittel, Pflanzliche\ Nahrungsmittel, Getreide\} \\
     A_2'' & = \{Weizen, Hafer, Rindfleischburger\}
 \end{align}
+Für eine beliebige Teilmenge $A \subseteq G$ gilt $A \subseteq A''$ und für $B \subseteq M$ gilt $B \subseteq B''$.
+Der Grund dafür, dass $A'' = A$ und $B'' = B$ nur für einen formalen Begriff gilt, ist, dass ein formaler Begriff die größtmöglichen Mengen darstellt, welche durch Ableitungen von $A$ und $B$ erzeugt werden können.
 
 \begin{figure}[!ht]
     \centering
@@ -117,16 +117,16 @@ Für diese gilt, dass die Knoten die folgenden Eigenschaften besitzen:
 Zwischen den Knoten bestehen im Begriffsverband hierarchische Beziehungen.
 Das bedeutet, dass der Knoten $x$ unterhalb des Knotens $y$ liegt, wenn $x \leq y$ gilt.
 Dabei lassen sich grundsätzlich zwei Leserichtungen für das Liniendiagramm definieren.
-Die erste Leserichtung geht von unten nach oben und beschreibt einen Gegenstand $g$ durch die Merkmale, die erreicht werden können, wenn man den Linien im Diagramm nach oben folgt.
-Durch die zweite Leserichtung werden alle Gegenstände eines Merkmals $m$ aufgelistet, welche durch das Verfolgen der Linien im Diagramm von oben nach unten erreicht werden können.
+Die erste Leserichtung geht von unten nach oben und beschreibt einen Gegenstand $g$ durch die Merkmale $m$, die erreicht werden können, wenn man den Linien im Diagramm nach oben folgt.
+Durch die zweite Leserichtung werden alle Gegenstände $g$ eines Merkmals $m$ aufgelistet, welche durch das Verfolgen der Linien im Diagramm von oben nach unten erreicht werden können.
 Sowohl die erste als auch die zweite Leserichtung können Knoten enthalten, welche nach oben oder unten mehrere Linien aufweisen.
-In diesem Fall werden beide Pfade verfolgt.
+In diesem Fall werden alle Pfade verfolgt.
 Die erste und zweite Leserichtung ist dabei nichts anderes als Inhalt und Umfang für Gegenstand und Merkmal eines Knotens. \\
 
 Im Begriffsverband aus \autoref{fig:begriffsverband} ist der Gegenstand Apfel unter dem Merkmal pflanzliche Nahrungsmittel zu finden.
 Um den Inhalt dieses Knotens zu bestimmen wird der Pfad von Apfel nach oben verfolgt.
 Dabei werden beginnend vom Knoten mit dem Gegenstand Apfel die Merkmale pflanzliche Nahrungsmittel und Nahrungsmittel erreicht.
 Der Umfang dieses Knotens wird durch das Verfolgen des Pfades vom Merkmal pflanzliche Nahrungsmittel nach unten bestimmt.
-Dabei werden die nacheinander die Gegenstände Apfel, Weizen, Hafer und Rindfleischburger erreicht.
+Dabei werden nacheinander die Gegenstände Apfel, Weizen, Hafer und Rindfleischburger erreicht.
 Der Knoten mit dem Gegenstand Rindfleischburger ist ein Knoten, welcher kein explizites Merkmal besitzt.
 Die Merkmale werden in diesem Fall implizit durch die Merkmale der übergeordneten Knoten bestimmt. \\
