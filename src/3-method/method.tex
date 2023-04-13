@@ -26,7 +26,7 @@ Ebenfalls ist die Unterteilung in unterschiedliche Rechtfertigung (positiv, nega
 
 \subsection{Versuchsaufbau}
 Um die Effektivität des Begriffsverbandes in Bezug auf die Auseinandersetzung mit diversen Inhalten zu untersuchen, wurden zwei Prototypen entwickelt.
-Der erste Prototyp ähnelt einer klassischen Listenansicht, welche auf einem \ac{RS} basiert.
+Der erste Prototyp ähnelt einer klassischen Listenansicht, welche auf einem content-based \ac{RS} basiert.
 Der zweite Prototyp ist ein Begriffsverband, welcher auf der vorher genannten Vorstudie aufgebaut ist.
 Beide Prototypen wurden mithilfe der Design- und Prototyping-Software Adobe XD von Adobe entwickelt\footnote{\url{https://www.adobe.com/}}.
 Adobe XD ermöglicht es, Prototypen ohne Code zu erstellen und diese anschließend mit Testpersonen zu testen.
@@ -53,8 +53,8 @@ Bei dieser Listenansicht steht der angeklickte Artikel im Vordergrund und die vo
 Die Auflistung dieser Artikel erfolgt nach der Relevanz des Artikels für die nutzende Person.
 In diesem Fall ist der Parameter, welcher die Relevanz bestimmt die Ähnlichkeit zum Artikel, welcher gerade gelesen wird.
 Die Ähnlichkeit wurde manuell definiert.
-Sie richtet sich danach, welche Welten der \ac{EC} den Artikel zugeordnet wurden.
-\textcolor{red}{Tabelle X gibt an...}
+Dabei richtet sich Ähnlichkeit danach, welche Welten der \ac{EC} den Artikel zugeordnet wurden.
+Dadurch wird ein content-based \ac{RS} simuliert, welches die Artikel bezüglich der Ähnlichkeit ihres Inhalts empfiehlt.\\
 \begin{table}
     \centering
     \newcolumntype{I}{>{\centering\arraybackslash}p{10pt}}
@@ -94,13 +94,19 @@ Sie richtet sich danach, welche Welten der \ac{EC} den Artikel zugeordnet wurden
                 \unused &                            &                                &                            &                           &            &    &            &   \\ \hline
             \end{tabular}
         \end{minipage}}
-    \caption{\label{fig:list-worlds}Liste - Welten \textcolor{red}{TODO}}
+    \caption{\label{table:list-worlds}Kreuztabelle - Welten im Listen-Prototyp}
 \end{table}
+
+\autoref{table:list-worlds} zeigt 13 verschiedene Artikel, welche in jeweils vier Welten eingeteilt wurden.
+Dabei ist jede Welt wiederum in positiv und negativ eingeteilt.
+Ein Kreuz $\times$ bedeutet, dass eine Inzidenzrelation zwischen Artikel und der Rechtfertigung einer Welt besteht.
+\textcolor{red}{Die in der \autoref{table:list-worlds} dargestellten Artikel sind in der Reihenfolge aufgelistet wie sie im Prototyp angezeigt werden.}
+Für den Fall, dass eine Person einen Artikel liest, werden die Artikel erneut angeordnet, sodass die Artikel mit der höchsten Ähnlichkeit zu dem Artikel, welcher gerade gelesen wird, zuerst angezeigt werden.
 
 \subsection{Prototyp - Begriffsverband}\label{subsubsec:prototyp-2}
 Der zweite Prototyp greift die Ergebnisse der Vorstudie auf und entwickelt diese weiter.
 Er ist somit eine weitere Iteration auf dem Weg zur finalen Umsetzung.
-Dieser Abschnitt erläutert möglichst detailliert die einzelnen Schritte, welche zu diesem Prototypen geführt haben.\\
+Dieser Abschnitt erläutert möglichst detailliert die einzelnen Schritte, welche zu diesem Prototyp geführt haben.\\
 
 \begin{figure}[!ht]
     \centering
