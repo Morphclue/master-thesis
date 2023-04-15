@@ -1,6 +1,6 @@
 \subsection{Formale Begriffsanalyse}
 Die \ac{FBA} ist ein mathematischer Formalismus, welcher es ermöglicht gegebene Daten auf hierarchische relationale Zusammenhänge zu analysieren \cite{formale-begriffsanalyse, formal-concept-analysis-wille}.
-Ein formaler Kontext ist ein Tripel $\mathbb{K} \coloneqq (G, M, I)$, wobei $G$ die Menge der Gegenstände, $M$ die Menge der Merkmale und die Menge der Inzidenzrelationen $I \subseteq G \times M$ definiert.
+Ein formaler Kontext ist ein Tripel $\mathbb{K} \coloneqq (G, M, I)$, wobei $G$ die Menge der Gegenstände, $M$ die Menge der Merkmale und der Inzidenzrelation $I \subseteq G \times M$ definiert.
 Gegenstände können als Kategorisierung von Daten verstanden werden, während Merkmale die Eigenschaften der Gegenstände beschreiben.
 Eine Inzidenzrelation ist eine binäre Relation, welche angibt, ob ein Gegenstand ein Merkmal aufweist.
 Sie besteht aus Tupeln der Form $(g,m)$ mit $g \in G$ und $m \in M$.
@@ -38,7 +38,7 @@ Der Gegenstand Weizen besitzt drei Inzidenzrelationen.
 Er steht jeweils mit den Merkmalen Nahrungsmittel, pflanzliche Nahrungsmittel und Getreide in Relation.
 Betrachtet man die Kreuztabelle näher, so fällt auf, dass alle Gegenstände, welche das Merkmal Getreide aufweisen, auch das Merkmal pflanzliche Nahrungsmittel aufweisen.
 Dies ist ein Beispiel für eine Implikation zwischen Merkmalen.
-Dabei gilt für zwei Mengen von Merkmalen $M_1, M_2 \subseteq M$, dass $M_1\implies M_2 \coloneqq M_1' \subseteq M_2'$.\\
+Dabei gilt für zwei Mengen von Merkmalen $B_1, B_2 \subseteq B$, dass $B_1\implies B_2 :\iff B_1' \subseteq B_2'$.\\
 
 % Beispiel & A'' = A
 Für ein besseres Verständnis der \ac{FBA} werden weitere Beispiele anhand der \autoref{table:fca-food} erläutert.
