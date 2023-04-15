@@ -4,12 +4,12 @@ Ein formaler Kontext ist ein Tripel $\mathbb{K} \coloneqq (G, M, I)$, wobei $G$ 
 Gegenstände können als Kategorisierung von Daten verstanden werden, während Merkmale die Eigenschaften der Gegenstände beschreiben.
 Eine Inzidenzrelation ist eine binäre Relation, welche angibt, ob ein Gegenstand ein Merkmal aufweist.
 Sie besteht aus Tupeln der Form $(g,m)$ mit $g \in G$ und $m \in M$.
-Ein formaler Begriff des Kontextes $\mathbb{K}$ ist ein Tupel $(A,B)$, wobei $A \subseteq G$ und $B \subseteq M$.
+Ein formaler Begriff des Kontexts $\mathbb{K}$ ist ein Tupel $(A,B)$, wobei $A \subseteq G$ und $B \subseteq M$.
 Die Ableitung von $A$ ist definiert als $A' \coloneqq \{m \in M \mid \forall g \in A, (g,m) \in I\}$.
 $A'$ ist der Inhalt (Extent) von $A$.
 Analog kann für Teilmenge $B$ der Umfang (Intent) $B'$ bestimmt werden mit $B' \coloneqq \{g \in G \mid \forall m \in B, (g,m) \in I\}$.
 Für einen formalen Begriff gilt, dass $A = B'$ und $B = A'$.
-Eine weitere Bedingung ist, dass für die Ableitung von $A'$ $A'' = A$ und für $B'$ $B'' = B$ gelten muss.\\
+Implizit folgt daraus, dass für die Ableitung von $A'$ und $B'$ die Gleichung $A'' = A$ und $B'' = B$ gelten muss.\\
 
 \begin{center}
     \begin{table}[!ht]
@@ -31,7 +31,7 @@ Eine weitere Bedingung ist, dass für die Ableitung von $A'$ $A'' = A$ und für 
 \end{center}
 
 % Tabelle & Implikation
-\autoref{table:fca-food} zeigt beispielhaft die Visualisierung eines formalen Kontextes $\mathbb{K}$ in Form einer Kreuztabelle.
+\autoref{table:fca-food} zeigt beispielhaft die Visualisierung von einem formalen Kontext $\mathbb{K}$ in Form einer Kreuztabelle.
 In dieser Tabelle sind die Gegenstände als Zeilen und die Merkmale als Spalten beschriftet.
 Ein Kreuz $\times$ gibt an, ob ein Gegenstand ein Merkmal aufweist.
 Also, ob ein Tupel der Form $(g,m)$ in der Menge der Inzidenzrelationen $I$ enthalten liegt.
@@ -43,7 +43,7 @@ Dabei gilt für zwei Mengen von Merkmalen $B_1, B_2 \subseteq B$, dass $B_1\impl
 
 % Beispiel & A'' = A
 Für ein besseres Verständnis der \ac{FBA} werden weitere Beispiele anhand der \autoref{table:fca-food} erläutert.
-Ein formaler Begriff des Kontextes $\mathbb{K}$ ist das Tupel $(A_1, B_1)$ mit:
+Ein formaler Begriff des Kontexts $\mathbb{K}$ ist das Tupel $(A_1, B_1)$ mit:
 \begin{align}
     A_1 & = \{Weizen, Hafer, Rindfleischburger\} \subseteq G                     \\
     B_1 & = \{Nahrungsmittel, Pflanzliche\ Nahrungsmittel,Getreide\} \subseteq M
@@ -63,7 +63,32 @@ Dies gilt jedoch nur für formale Begriffe.
     A_2'' & = \{Weizen, Hafer, Rindfleischburger\}
 \end{align}
 Für eine beliebige Teilmenge $A \subseteq G$ gilt $A \subseteq A''$ und für $B \subseteq M$ gilt $B \subseteq B''$.
-Der Grund dafür, dass $A'' = A$ und $B'' = B$ nur für einen formalen Begriff gilt, ist, dass ein formaler Begriff immer die größtmöglichen Mengen darstellt, welche durch Ableitungen von $A$ und $B$ erzeugt werden können.
+Der Grund dafür, dass $A'' = A$ und $B'' = B$ nur für einen formalen Begriff gilt, ist, dass ein formaler Begriff immer die größtmöglichen Mengen darstellt, welche durch Ableitungen von $A$ und $B$ erzeugt werden können.\\
+
+% Begriffsverband
+Die Daten von \autoref{table:fca-food} können als Begriffsverband visualisiert werden.
+Dabei werden die gegebenen Daten als Liniendiagramm dargestellt.
+Die Knoten in diesem Liniendiagramm werden dabei in Verbindung zu anderen Knoten gemäß der Regeln einer Ordnung gesetzt.
+Für diese gilt, dass die Knoten die folgenden Eigenschaften besitzen:
+\begin{align}
+    x \leq x \tag{reflexiv}                                       \\
+    x \leq y \land y \leq x \Rightarrow x=y \tag{antisymmetrisch} \\
+    x \leq y \land y \leq z \Rightarrow x\leq z \tag{transitiv}
+\end{align}
+Ein formaler Kontext kann als Begriffsverband dargestellt werden, wenn gilt, dass je zwei Knoten $x$ und $y$ ein Supremum (obere Grenze $\lor$) und Infimum (untere Grenze $\land$) besitzen.
+Im Begriffsverband repräsentieren Knoten einen formalen Begriff.
+Über einem Knoten sind die Merkmale und unter einem Knoten die Gegenstände aufgeführt.
+Die Verbindung zwischen den Knoten repräsentiert die Implikationen von Merkmalen.
+Zwischen den Knoten bestehen im Begriffsverband hierarchische Beziehungen.
+Das bedeutet, dass der Knoten $x$ unterhalb des Knotens $y$ liegt, wenn $x \leq y$ gilt.\\
+
+Für einen Begriffsverband lassen sich grundsätzlich zwei Leserichtungen definieren.
+Die erste Leserichtung geht von unten nach oben und ermöglicht es, einen Gegenstand $g$ durch die Merkmale $m$ zu beschreiben, die durch das Verfolgen der aufsteigenden Linien im Diagramm erreicht werden können.
+Durch die zweite Leserichtung werden alle Gegenstände $g$ eines Merkmals $m$ beschrieben, welche durch das Verfolgen der Linien im Diagramm von oben nach unten erreicht werden können.
+Sowohl die erste als auch die zweite Leserichtung können Knoten enthalten, welche nach oben oder unten mehrere Linien aufweisen.
+In diesem Fall werden alle Pfade verfolgt.
+Grundlage für die Leserichtungen bilden die Kreuze $\times$ aus \autoref{table:fca-food}.
+Die erste und zweite Leserichtung ist dabei nichts anderes als Inhalt und Umfang für Gegenstand und Merkmal eines Knotens. \\
 
 \begin{figure}[!ht]
     \centering
@@ -99,30 +124,8 @@ Der Grund dafür, dass $A'' = A$ und $B'' = B$ nur für einen formalen Begriff g
     \caption{\label{fig:begriffsverband}Begriffsverband - Nahrungsmittel}
 \end{figure}
 
-% Begriffsverband
-Die Daten von \autoref{table:fca-food} können als Begriffsverband visualisiert werden.
-Dabei werden die gegebenen Daten als Liniendiagramm, wie in \autoref{fig:begriffsverband}, dargestellt. % TODO: cite? \cite{introduction-lattices}
-Im Liniendiagramm repräsentieren Knoten Relationen einen formalen Begriff.
-Über einem Knoten sind die Merkmale und unter einem Knoten die Gegenstände aufgeführt.
-Die Verbindung zwischen den Knoten repräsentiert die Implikationen von Merkmalen.
-Die Knoten werden dabei in Verbindung zu anderen Knoten gemäß der Regeln einer Ordnung gesetzt.
-Für diese gilt, dass die Knoten die folgenden Eigenschaften besitzen:
-\begin{align}
-    x \leq x \tag{reflexiv}                                       \\
-    x \leq y \land y \leq x \Rightarrow x=y \tag{antisymmetrisch} \\
-    x \leq y \land y \leq z \Rightarrow x\leq z \tag{transitiv}
-\end{align}
-
-Zwischen den Knoten bestehen im Begriffsverband hierarchische Beziehungen.
-Das bedeutet, dass der Knoten $x$ unterhalb des Knotens $y$ liegt, wenn $x \leq y$ gilt.
-Dabei lassen sich grundsätzlich zwei Leserichtungen für das Liniendiagramm definieren.
-Die erste Leserichtung geht von unten nach oben und beschreibt einen Gegenstand $g$ durch die Merkmale $m$, die erreicht werden können, wenn man den Linien im Diagramm nach oben folgt.
-Durch die zweite Leserichtung werden alle Gegenstände $g$ eines Merkmals $m$ aufgelistet, welche durch das Verfolgen der Linien im Diagramm von oben nach unten erreicht werden können.
-Sowohl die erste als auch die zweite Leserichtung können Knoten enthalten, welche nach oben oder unten mehrere Linien aufweisen.
-In diesem Fall werden alle Pfade verfolgt.
-Die erste und zweite Leserichtung ist dabei nichts anderes als Inhalt und Umfang für Gegenstand und Merkmal eines Knotens. \\
-
-Im Begriffsverband aus \autoref{fig:begriffsverband} ist der Gegenstand Apfel unter dem Merkmal pflanzliche Nahrungsmittel zu finden.
+Der aus \autoref{table:fca-food} abgeleitete Begriffsverband ist in \autoref{fig:begriffsverband} dargestellt. 
+In diesem Begriffsverband ist der Gegenstand Apfel unter dem Merkmal pflanzliche Nahrungsmittel zu finden.
 Um den Inhalt dieses Knotens zu bestimmen wird der Pfad von Apfel nach oben verfolgt.
 Dabei werden beginnend vom Knoten mit dem Gegenstand Apfel die Merkmale pflanzliche Nahrungsmittel und Nahrungsmittel erreicht.
 Der Umfang dieses Knotens wird durch das Verfolgen des Pfades vom Merkmal pflanzliche Nahrungsmittel nach unten bestimmt.
