@@ -8,7 +8,8 @@ Ein formaler Begriff des Kontextes $\mathbb{K}$ ist ein Tupel $(A,B)$, wobei $A 
 Die Ableitung von $A$ ist definiert als $A' \coloneqq \{m \in M \mid \forall g \in A, (g,m) \in I\}$.
 $A'$ ist der Inhalt (Extent) von $A$.
 Analog kann für Teilmenge $B$ der Umfang (Intent) $B'$ bestimmt werden mit $B' \coloneqq \{g \in G \mid \forall m \in B, (g,m) \in I\}$.
-Für einen formalen Begriff gilt, dass $A = B'$ und $B = A'$.\\
+Für einen formalen Begriff gilt, dass $A = B'$ und $B = A'$.
+Eine weitere Bedingung ist, dass für die Ableitung von $A'$ $A'' = A$ und für $B'$ $B'' = B$ gelten muss.\\
 
 \begin{center}
     \begin{table}[!ht]
@@ -53,10 +54,8 @@ Für den Inhalt von $A_1'$ und dem Umfang von $B_1'$ gilt:
     B_1' & = \{Weizen, Hafer, Rindfleischburger\}
 \end{align}
 Somit gilt die vorher erwähnte Definition für den formalen Begriff $A_1 = B_1'$ und $B_1 = A_1'$.
-Ebenfalls lässt sich durch die Ableitungen im Beispiel eine weitere Eigenschaft von Ableitungen erkennen.
-Für die Ableitung von $A'$ gilt $A'' = A$ und für $B$ gilt $B'' = B$.
-Dies gilt jedoch nur für einen formalen Begriff.
-Verdeutlichen lässt sich durch ein weiteres Beispiel:
+Ebenfalls lässt sich an dieser Rechnung die Definition erkennen, dass die zweifache Ableitung $A''$ und $B''$ gleich $A$ und $B$ ist.
+Dies gilt jedoch nur für formale Begriffe.
 \setcounter{equation}{0}
 \begin{align}
     A_2   & = \{Weizen\}                                                \\
@@ -64,7 +63,7 @@ Verdeutlichen lässt sich durch ein weiteres Beispiel:
     A_2'' & = \{Weizen, Hafer, Rindfleischburger\}
 \end{align}
 Für eine beliebige Teilmenge $A \subseteq G$ gilt $A \subseteq A''$ und für $B \subseteq M$ gilt $B \subseteq B''$.
-Der Grund dafür, dass $A'' = A$ und $B'' = B$ nur für einen formalen Begriff gilt, ist, dass ein formaler Begriff die größtmöglichen Mengen darstellt, welche durch Ableitungen von $A$ und $B$ erzeugt werden können.
+Der Grund dafür, dass $A'' = A$ und $B'' = B$ nur für einen formalen Begriff gilt, ist, dass ein formaler Begriff immer die größtmöglichen Mengen darstellt, welche durch Ableitungen von $A$ und $B$ erzeugt werden können.
 
 \begin{figure}[!ht]
     \centering
