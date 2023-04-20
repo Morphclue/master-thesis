@@ -37,5 +37,3 @@ ggplot(data, aes(x = Kategorie)) +
     axis.title.x = element_text(size = 12),
     axis.title.y = element_text(size = 12)
   )
-
-
