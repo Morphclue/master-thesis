@@ -219,7 +219,7 @@ Ein Teilverband ist eine Teilmenge eines Verbandes, welche selbst ein Verband is
 In diesem Fall könnte Elektromobilität ein Teilverband von Mobilität sein, welches wiederum ein Verband von Verkehr sein könnte.
 Dieses Konzept ist nicht Teil der Masterarbeit, aber könnte eine interessante Erweiterung des Begriffsverbandes für weitere Prototypen darstellen.
 
-\subsection{AttrakDiff}
+\subsection{AttrakDiff}\label{subsec:results-attrakdiff}
 Für die Visualisierung wurden die Ergebnisse der Online-Plattform vom AttrakDiff verwendet.
 Bei der Interpretation der Ergebnisse ist zu beachten, dass alle Personen bereits Vorerfahrung mit der Listendarstellung hatten.
 Der Begriffsverband hingegen ist für alle Teilnehmenden ein neues Konzept.
@@ -262,34 +262,65 @@ Schließlich zeigt besonders die \ac{HQ-S}, dass der Begriffsverband das persön
 \textcolor{red}{TODO: Weiter beschreiben}
 
 \subsection{QUESI}
+Mithilfe von R wurden die fünf unterschiedlichen Subskalen vom \ac{QUESI}-Fragebogen ausgewertet.
+Dafür wurde das arithmetische Mittel $\overline{x}$ und die Standardabweichung (SD) berechnet.
+Da die Antworten auf einer 5-Punkte Likert Skala gegeben wurden, liegt der Mittelwert zwischen $1$ und $5$.
+Die daraus resultierenden Werte sind in \autoref{table:quesi-list} und \autoref{table:quesi-fca} dargestellt.
+Zusätzlich wurde der \ac{QUESI}-Score über alle Fragen hinweg als Mittelwert berechnet.
+Dieser ist ebenfalls in der Tabelle als Score angegeben und dient als Gesamtbewertung der Testpersonen.
+
 \begin{center}
     \begin{table}[!ht]
         \centering
         \begin{tabular}{|l|c|c|c|c|c|c|}
             \hline
-                                                 & Arbeitsbelastung & Ziele & Lernen & Vertrautheit & Fehler & Gesamt \\ \hline \hline
-            \multicolumn{1}{|c|}{$\overline{x}$} & 4,4              & 4,4   & 4,7    & 4,67         & 5      & 4,61   \\ \hline
-            \multicolumn{1}{|c|}{SD}             & 0,93             & 0,81  & 0,79   & 0,66         & 0      & 0,77   \\ \hline
+                                                 & Arbeitsbelastung & Ziele & Lernen & Vertrautheit & Fehler & Score \\ \hline \hline
+            \multicolumn{1}{|c|}{$\overline{x}$} & 4,4              & 4,4   & 4,7    & 4,67         & 5      & 4,61  \\ \hline
+            \multicolumn{1}{|c|}{SD}             & 0,93             & 0,81  & 0,79   & 0,66         & 0      & 0,77  \\ \hline
         \end{tabular}
         \caption{QUESI - Liste}
         \label{table:quesi-list}
     \end{table}
 \end{center}
 
+Die Mittelwerte für \autoref{table:quesi-list} liegen im Bereich von $4,4$ bis $5$.
+Dies deutet darauf hin, dass die Testpersonen die Darstellung als Liste als intuitiv empfunden haben.
+Während der Verwendung des Systems gab es keine Probleme mit der Bedienung.
+Dies zeigt sich dadurch, dass die Standardabweichung bei der Subskala für Fehler bei $0$ liegt.
+Allgemein lässt sich sagen, dass die Antworten der Testpersonen sehr einheitlich waren, da die Standardabweichung bei allen Skalen unter $1$ liegt.
+
 \begin{center}
     \begin{table}[!ht]
         \centering
         \begin{tabular}{|l|c|c|c|c|c|c|}
             \hline
-                                                 & Arbeitsbelastung & Ziele & Lernen & Vertrautheit & Fehler & Gesamt \\ \hline \hline
-            \multicolumn{1}{|c|}{$\overline{x}$} & 3,23             & 4,37  & 3,27   & 3,83         & 4,25   & 3,76   \\ \hline
-            \multicolumn{1}{|c|}{SD}             & 1,41             & 0,76  & 1,39   & 1,29         & 0,85   & 1,27   \\ \hline
+                                                 & Arbeitsbelastung & Ziele & Lernen & Vertrautheit & Fehler & Score \\ \hline \hline
+            \multicolumn{1}{|c|}{$\overline{x}$} & 3,23             & 4,37  & 3,27   & 3,83         & 4,25   & 3,76  \\ \hline
+            \multicolumn{1}{|c|}{SD}             & 1,41             & 0,76  & 1,39   & 1,29         & 0,85   & 1,27  \\ \hline
         \end{tabular}
         \caption{QUESI - Begriffsverband}
         \label{table:quesi-fca}
     \end{table}
 \end{center}
 
+Bei der Auswertung der Antworten bezüglich des Begriffsverbandes lässt sich in \autoref{table:quesi-fca} erkennen, dass die Testpersonen die Darstellung als Begriffsverband als weniger intuitiv empfunden haben.
+Ebenfalls waren die Meinungen der Testpersonen unterschiedlicher als bei der Liste.
+Dies zeigt sich darin, dass die Standardabweichung bei mehreren Subskalen über $1$ liegt.
+Ein Grund hierfür könnte sein, dass die Testpersonen viel unterschiedlichere Erfahrungen mit dem Begriffsverband gemacht haben.
+Beweisen lässt sich dies durch die unterschiedlichen Aussagen und Verständnisse zum Begriffsverband in den Interviews.\\
+
+Im direkten Vergleich lässt sich sagen, dass die Ziele mit dem Begriffsverband ähnlich gut erreicht werden können wie mit einer Liste.
+Wenn man dies mit der \ac{PQ} aus \autoref{subsec:results-attrakdiff} vergleicht, bestätigen sich die Ergebnisse.
+Es wird bei der Listendarstellung zwar eine höhere \ac{PQ} erzielt, jedoch ist diese nicht signifikant.
+Ebenfalls bestätigen die Ergebnisse vom \ac{QUESI}-Fragebogen, die Annahme, dass die Vorerfahrung mit einem Produkt die \ac{PQ} beeinflusst.
+Gerade die Subskalen für Arbeitsbelastung und Vertrautheit fallen beim Begriffsverband deutlich schlechter aus als bei der Liste.
+Dies ist jedoch offensichtlich, wenn die meisten Darstellungsformen im Internet als Liste dargestellt werden.\\
+
+Einige Personen gaben an, dass sie Fehler oder Probleme im Begriffsverband wahrgenommen haben.
+Das kann daran liegen, dass die Testpersonen nicht die Möglichkeit hatten, sich ausreichend mit dem Begriffsverband vertraut zu machen.
+Aus diesem Grund könnte eine hohe Komplexität und Unverständnis bei der Navigation im Begriffsverband die Ursache für schlechtere Ergebnisse sein.
+Dieser Wert lässt sich ebenfalls durch die Interviews und die darin enthaltenen Aussagen bestätigen.
+Es wäre jedoch möglich, dass der \ac{QUESI}-Score mit zusätzlichen Erfahrungen und einem verbesserten Tutorial beim Begriffsverband steigen würde.
 
 \subsection{Eigener Fragebogen}
 %%% YouTube News 
