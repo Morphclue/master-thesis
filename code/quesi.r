@@ -1,7 +1,7 @@
 if (!require('pacman')) install.packages('pacman')
 p_load(pacman)
 
-data <- read.csv("./code/list-quesi.csv", header = TRUE, check.names = FALSE, encoding = "UTF-8")
+data <- read.csv("./code/fca-quesi.csv", header = TRUE, check.names = FALSE, encoding = "UTF-8")
 data <- as.matrix(data[, 1:14])
 
 workload <- mean(data[, c(1, 6, 11)])
