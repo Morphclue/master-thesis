@@ -215,23 +215,23 @@ Das liegt daran, dass Nutzende somit über die aktuelle Lage der Berichterstattu
 
 % Knotendarstellung
 Es gibt viele verschiedene Möglichkeiten, wie die Knoten innerhalb eines Begriffsverbands dargestellt werden können.
-In der Literatur werden die Knoten jedoch meistens nur als Kreise dargestellt, welche Beschriftungen über und unter sich tragen.
+In der Literatur werden die Knoten jedoch meistens als Kreise dargestellt, welche Beschriftungen über und unter sich tragen.
 In der Vorstudie wurde eine ähnliche Darstellung verwendet.
 Die Knoten wurden in zwei Hälften geteilt, wobei die obere Hälfte Welten aus den \ac{EC} und die untere Hälfte die jeweiligen Artikel repräsentiert.
 Dabei können mehrere Welten und Artikel in einem Knoten liegen.
 Falls der Knoten explizit zu einer oder mehreren Welten gehört, dann wird der obere Halbkreis blau eingefärbt.
 Falls Artikel innerhalb eines Knotens liegen, dann wird der untere Halbkreis gelb eingefärbt. \textcolor{red}{Gibt es einen Grund für die Farben?}
-Zusätzlich dazu wird am Knoten eine Zahl angegeben, welche aufsummiert angeben soll wie viele Artikel innerhalb dieses und den darunterliegenden Knoten liegen.
+Zusätzlich dazu wird am Knoten eine Zahl angegeben, welche aufsummiert angeben soll, wie viele Artikel innerhalb dieses und den darunterliegenden Knoten liegen.
 Diese Summe wird auch in der Literatur verwendet, jedoch tritt diese Summe nicht in Kombination mit den konkreten Gegenständen auf.
 Die Gegenstände werden erst aufgelistet, sobald eine Interaktion mit einem entsprechenden Knoten erfolgt. \\
 
 % Zeichensatz
 Das Problem an dieser Darstellung ist, dass permanent alle Artikel für die Nutzenden angezeigt werden.
-Dies sorgt für zusätzliches Rauschen und lenkt die Aufmerksamkeit auf die dargestellten Artikel, da diese wesentlich mehr Text ausmachen als die Welten.
+Dies sorgt für zusätzliches Rauschen und lenkt die Aufmerksamkeit auf die dargestellten Artikel, da diese einen wesentlich höheren Anteil des Textes ausmachen als die Welten.
 Konkret werden 83 Zeichen für die Welten verwendet.
 Für die Artikel werden 419 Zeichen verwendet.
 Bei insgesamt 502 Zeichen machen die Artikel $83,47\%$ des Gesamttextes aus.
-Um ein Bewusstsein für die eigene Filterblase zu lenken, darf der Fokus jedoch nicht auf den Artikeln liegen.
+Um ein Bewusstsein für die eigene Filterblase zu entwickeln, darf der Fokus jedoch nicht auf den Artikeln liegen.
 Der Fokus sollte auf den Welten liegen, da diese eine Perspektive auf ein gegebenes Thema darstellen.\\
 
 % Neues Design
@@ -239,7 +239,7 @@ Aus diesem Grund wurden im neuen Design Knoten verwendet, welche nur Beschriftun
 Die Artikel werden stattdessen erst aufgelistet, wenn Nutzende mit dem Knoten interagieren.
 Dieses Design hat mehrere Vorteile.
 Zum einen wird der dargestellte Text für Nutzende deutlich kürzer.
-Dies führt zu einer besseren Lesbarkeit und reduziert die hohe Komplexität beim ersten Betrachten des Graphen.
+Dies führt zu einer besseren Lesbarkeit und reduziert die Komplexität beim Betrachten des Graphen.
 Statt mit einer großen Menge an Informationen konfrontiert zu werden, können Nutzende sich zunächst auf die Welten und die Verknüpfungen zwischen diesen konzentrieren.
 Zum anderen wird eine bewusste Entscheidung für eine Perspektive auf ein Thema erzwungen.
 Nutzende müssen sich bewusst für eine Welt entscheiden, um die Artikel dieser Welt einsehen zu können.
@@ -247,11 +247,11 @@ Dies führt zwar auch dazu, dass Nutzende mehr Klicks benötigen, um die gewüns
 
 % Unterschiedliche Arten der Interaktion
 Es gibt zwei verschiedene Wege, um mit einem Knoten zu interagieren.
-Es ist möglich auf den oberen Halbkreis und auf den unteren Halbkreis zu klicken.
+Es ist möglich, auf den oberen Halbkreis und auf den unteren Halbkreis zu klicken.
 Beide Interaktionsmöglichkeiten existierten bereits in der Vorstudie.
 Die Interaktion mit dem oberen Halbkreis führt dazu, dass alle untergeordneten Knoten farblich hervorgehoben werden.
 Auf diese Art und Weise wird der Umfang eines Begriffs dargestellt.
-Die Leserichtung in diesem Fall ist von oben nach unten und bedeutet, dass alle Artikel bezüglich einer Welt angezeigt werden.
+Die Leserichtung ist in diesem Fall von oben nach unten und bedeutet, dass alle Artikel bezüglich einer Welt angezeigt werden.
 Mithilfe dieser Interaktion soll es möglich sein, sich einen Überblick über die Artikel einer Welt zu verschaffen.
 Eine Interaktion mit dem unteren Halbkreis hingegen sorgt dafür, dass alle übergeordneten Knoten farblich hervorgehoben werden.
 Die Leserichtung ist von unten nach oben.
@@ -265,19 +265,19 @@ Stattdessen werden die Artikel in einer Liste neben dem Graphen angezeigt.
 Diese Liste unterscheidet sich je nach Interaktion.
 Eine Interaktion mit dem oberen Halbkreis listet weiterhin alle Artikel auf, welche zur ausgewählten Welt gehören.
 Da im Vergleich zur Vorstudie Informationen verloren gehen würden, wenn nur die Artikel einer Welt angezeigt werden ohne die Welten selbst, wurde die Liste um eine Art Kategorisierung erweitert.
-Die Artikel innerhalb der Liste werden in Anzahl der weiteren Welten gruppiert, welche den Artikel beschreiben.
+Die Artikel innerhalb der Liste werden in die Anzahl der weiteren Welten gruppiert, welche den Artikel beschreiben.
 Dabei gibt die Zahl Null an, dass die aufgelisteten Artikel in der ausgewählten Welt vorkommen.
 Eine Eins bedeutet, dass die Artikel in der ausgewählten Welt und einer weiteren Welt vorkommen.\\
 
 % Beispiel Welten Liste
 Ein Beispiel hilft hierbei, die Funktionsweise zu verstehen.
-Angenommen es existieren drei Welten: Staat, Markt und Industrie aus den \ac{EC}.
+Angenommen es existieren drei Welten: Staat, Markt und Industrie.
 Der erste Artikel gehört der Welt Staat an.
 Der zweite Artikel gehört der Welt Staat und Markt an.
 Der dritte Artikel gehört der Welt Staat und Industrie an.
 Wenn nun eine Testperson auf den Knoten Staat klickt, dann werden alle Artikel aufgelistet, welche zu der Welt Staat gehören.
-Bei null wäre dies nur der erste Artikel, weil nur die Welt Staat vorkommt und keine weitere Welt beschrieben wird.
-Bei einer Eins wären dies der zweite und der dritte Artikel, da diese Artikel in der Welt Staat und einer weiteren Welt vorkommen.
+Bei Gruppe Null enthält nur den ersten Artikel, weil nur die Welt Staat vorkommt und keine weitere Welt beschrieben wird.
+Bei Gruppe Eins wären dies der zweite und der dritte Artikel, da diese Artikel in der Welt Staat und einer weiteren Welt vorkommen.
 In diesem Fall wären die zusätzlichen Welten Markt oder Industrie.\\
 
 % Nachteil Liste
@@ -285,10 +285,10 @@ Der Nachteil an dieser Darstellung ist, dass die Liste nicht konkret aufzeigen k
 Es wäre auch möglich konkrete Welten anzugeben, jedoch würde dies die Lesbarkeit der Liste beeinträchtigen.
 Das liegt daran, dass für jede zusätzliche Welt eigene Überschriften benötigt würden.
 Dies würde die Liste wesentlich länger machen.
-Im vorhin genannten Beispiel wären dies drei Überschriften statt zwei Überschriften.
+Im vorhin genannten Beispiel wären dies drei Überschriften anstelle von zwei.
 In einem größeren Graphen mit mehr Welten wären dies wesentlich mehr.
-Da diese Iterationsstufe des Prototyps darauf bedacht ist Informationen möglichst zu komprimieren, wurde auf die genaue Angabe der Welten verzichtet.
-Stattdessen kann die Liste nun so gelesen werden, dass die Anzahl angibt wie weit die Artikel tatsächlich vom ausgewählten Thema entfernt sind.\\
+Da diese Iterationsstufe des Prototyps darauf bedacht ist Informationen möglichst stark zu komprimieren, wurde auf die genaue Angabe der Welten verzichtet.
+Stattdessen kann die Liste nun so gelesen werden, dass die Anzahl angibt, wie viele zusätzliche Knoten die Artikel von ausgewählten Welt entfernt sind.\\
 
 % Interaktion unten
 Eine Interaktion mit dem unteren Halbkreis führt weiterhin dazu, dass alle übergeordneten Knoten farblich hervorgehoben werden.
@@ -339,7 +339,7 @@ Stattdessen beschränkt sich die Liste auf die Artikel, welche in der ausgewähl
     \caption{\label{table:fca-worlds}Kreuztabelle - Welten im Begriffsverband-Prototyp}
 \end{table}
 
-Ähnlich wie bei der Tabelle in \autoref{table:list-worlds} wurde auch für diesen Prototyp eine Kreuztabelle erstellt.
+Ähnlich wie bei der Tabelle in \autoref{table:list-worlds} wurde auch für diesen Prototypen eine Kreuztabelle erstellt.
 \autoref{table:fca-worlds} zeigt die 13 verschiedenen Artikel, welche im Prototypen verwendet wurden.
 Mithilfe dieser Kreuztabelle wurde der Begriffsverband mit einem Tool des Fachgebiets Wissensverarbeitung (KDE) erstellt.
 Das daraus resultierende Liniendiagramm ist in \autoref{sec:stuff} \autoref{fig:fba-masterthesis} zu sehen.
@@ -349,22 +349,22 @@ Ein neues System einzuführen ist immer mit einem gewissen Lernaufwand verbunden
 Um das Experiment für alle Teilnehmenden möglichst gleich zu gestalten und den Lernaufwand zu erleichtern, wurde ein interaktives Tutorial entwickelt.
 Dieses Tutorial soll Teilnehmenden die Konzepte der \ac{FBA} und des \ac{EC} erläutern.
 Testpersonen sollen auf diese Art nicht sofort mit der Komplexität des Begriffsverbands konfrontiert werden.
-Stattdessen können die Testpersonen diesen mit ihren, im Tutorial erworbenen, gelernten Kenntnissen erforschen.\\
+Stattdessen können die Testpersonen diesen mit ihren, im Tutorial erworbenen, Kenntnissen erforschen.\\
 
 % Urpsrung
 Ein interaktives Tutorial ist eine Anleitung zur Verwendung eines Programms.
-Es kommt in der Regel häufig in Computerspielen zum Einsatz.
+Es kommt häufig in Computerspielen zum Einsatz.
 Dort wird es verwendet, um Spielenden die Grundsteuerung des Spiels in einem interaktiven Format zu vermitteln.
-Dabei werden explizite oder implizite Anweisungen vergeben, welche Spielende Schritt für Schritt durch das Tutorial führen.
+Dabei werden explizite oder implizite Anweisungen gegeben, welche Spielende Schritt für Schritt durch das Tutorial führen.
 Diese Tutorials kommen jedoch auch in anderen Bereichen zum Einsatz.
 Auf diese Art und Weise werden spieltypische Elemente auf spielfremde Bereiche übertragen.
 Dieser Prozess wird als Gamification bezeichnet.
-Eine Studie zeig, dass gamifizierte Lernvideos mit interaktiven Inhalten die Motivation und den Lernerfolg steigern können \cite{gamification-videos}.
+Eine Studie zeigt, dass gamifizierte Lernvideos mit interaktiven Inhalten die Motivation und den Lernerfolg steigern können \cite{gamification-videos}.
 Genau diese Eigenschaften sollen im Tutorial des Prototyps zum Einsatz kommen.
 Testpersonen sollen motiviert werden, sich mit dem System auseinanderzusetzen und dabei soll der Lernerfolg möglichst optimal sein.\\
 
 % Aufbau
-Das Tutorial besteht prinzipiell aus drei Teilen.
+Das Tutorial besteht aus drei Teilen.
 Im ersten Teil werden einige Prinzipien der \ac{FBA} erläutert.
 Im zweiten Teil werden grundlegende Konzepte der \ac{EC} erläutert.
 Der dritte Teil beinhaltet die Verknüpfung beider Konzepte.
@@ -404,34 +404,34 @@ Die einzelnen Teile des Tutorials werden im Folgenden erläutert.\\
 \end{figure}
 
 % Erster Teil 
-Um die Testpersonen mit den Prinzipen der \ac{FBA} vertraut zu machen wurden möglichst simple Beispiel gewählt.
+Um die Testpersonen mit den Prinzipen der \ac{FBA} vertraut zu machen, wurden möglichst simple Beispiel gewählt.
 Der erste Begriffsverband besteht aus der Kategorisierung von Tieren.
-Dabei bekommen die Teilnehmenden zunächst die Aufgabe einen Gegenstand der Kategorie Säugetier zuzuordnen.
-Im Tutorial werden Teilnehmenden durch Zusprüche bei einer korrekten Antwort wie \glqq Super!\grqq{} oder \glqq Richtig!\grqq{} belohnt.
-Bei einer falschen Antwort werden die Testpersonen über ihren Fehler aufgeklärt und dazu motiviert es erneut zu versuchen.
+Dabei bekommen die Teilnehmenden zunächst die Aufgabe, einen Gegenstand der Kategorie Säugetier zuzuordnen.
+Im Tutorial werden die Teilnehmenden durch Zusprüche bei einer korrekten Antwort wie \glqq Super!\grqq{} oder \glqq Richtig!\grqq{} belohnt.
+Bei einer falschen Antwort werden die Testpersonen über ihren Fehler aufgeklärt und dazu motiviert, es erneut zu versuchen.
 Die nächste Aufgabe besteht darin, dass die Teilnehmenden einen Gegenstand finden müssen, welcher nicht zur Kategorie der Säugetiere gehört.
 In diesem Schritt lernen die Testpersonen, dass es unterschiedliche Kategorien gibt und dass Gegenstände existieren, welche nicht zu einer Kategorie gehören.
 Im Anschluss lernen die Teilnehmenden in den nächsten Schritten die unterschiedlichen Relationen zwischen Kategorien kennen.
 Dabei werden die Testpersonen zunächst nur mit einfachen Relationen konfrontiert.
 Am Ende des ersten Abschnitts sehen die Teilnehmenden den Begriffsverband in der Abbildung \ref{fig:begriffsverband-tiere}.
-Dieser Begriffsverband zeigt die wichtigsten Konzepte der \ac{FBA} auf, welche für die Navigation mit dem Prototyp benötigt werden.
-Es existiert ein Knoten ohne Gegenstände, Knoten mit ein oder mehreren Gegenständen und ein Knoten ohne ein explizites Merkmal.
-Aufgaben fragen im letzten Schritt dieses Abschnitts die Testpersonen nach ihrem Verständnis zu ihren erlernten Kenntnissen.
+Dieser Begriffsverband zeigt die wichtigsten Konzepte der \ac{FBA} auf, welche für die Navigation mit dem Prototypen benötigt werden.
+Es existieren ein Knoten ohne Gegenstände, Knoten mit einen oder mehreren Gegenständen und ein Knoten ohne ein explizites Merkmal.
+Aufgaben fragen im letzten Schritt dieses Abschnitts die Testpersonen nach ihrem Verständnis zum gezeigten Begriffsverband ab.
 Dafür wird der Begriffsverband aus \autoref{fig:begriffsverband} verwendet, da dieser ebenfalls die wichtigsten Konzepte der \ac{FBA} beinhaltet.\\
 
 % Zweiter Teil
 Der zweite Abschnitt leitet das Konzept der Welten aus den \ac{EC} ein.
-Dabei wird beispielhaft ein Artikel mit verschwommenen Text angezeigt.
+Dabei wird beispielhaft ein Artikel mit verschwommenem Text angezeigt.
 In diesem Artikel werden einzelne Sätze in unterschiedlichen Farben hervorgehoben.
-Dies soll zeigen wie sich die unterschiedlichen Welten für einen einzelnen Artikel zusammensetzen.
+Dies soll zeigen, wie sich die unterschiedlichen Welten für einen einzelnen Artikel zusammensetzen.
 Es wird ebenfalls Bezug auf den ersten Teil genommen, indem beschrieben wird, dass die Welten eine weitere Form der Kategorisierung sind und diese den vorherigen Kategorien Tiere und Nahrungsmittel ähneln.\\
 
 % Dritter Teil
 Anschließend wird im dritten Teil des interaktiven Tutorials ein einzelner Knoten mit einer Welt und einem Artikel dargestellt.
-Dies soll helfen die gedankliche Brücke zwischen den beiden Konzepten zu schlagen.
+Dies soll helfen, die gedankliche Brücke zwischen den beiden Konzepten zu schlagen.
 Es wird ebenfalls die, in \autoref{subsubsec:prototyp-2} erwähnte, farbliche Verteilung erklärt.
 Diese farbliche Verteilung wird erst im dritten Teil des Tutorials eingeführt, da die farbliche Verteilung für Tiere und Nahrungsmittel nicht sinnvoll ist.
-Ebenfalls werden beiden Interaktionen, welche mit einem Knoten möglich sind, erklärt.
+Ebenfalls werden die beiden Interaktionen, welche mit einem Knoten möglich sind, erklärt.
 Die konkrete Funktionsweise der Interaktionen sind in \autoref{subsubsec:prototyp-2} beschrieben.\\
 
 \subsection{Fragebögen}
