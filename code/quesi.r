@@ -31,4 +31,11 @@ calculate_quesi <- function(data) {
 data <- read.csv("./code/fca-quesi.csv", header = TRUE, check.names = FALSE, encoding = "UTF-8")
 # data <- read.csv("./code/list-quesi.csv", header = TRUE, check.names = FALSE, encoding = "UTF-8")
 data <- as.matrix(data[, 1:14])
+data_high <- data[c(2, 5, 6, 10),]
+data_low <- data[-c(2, 5, 6, 10),]
+
 calculate_quesi(data)
+print("High news consumption")
+calculate_quesi(data_high)
+print("Low news consumption")
+calculate_quesi(data_low)
