@@ -353,5 +353,30 @@ Es ist positiv zu vermerken, dass die Testpersonen den Begriffsverband als eine 
 Verbunden mit den Ergebnissen aus den Interviews bietet der Begriffsverband eine gute Möglichkeit Zusammenhänge und Beziehungen besser zu verstehen.
 Für das Experiment bedeutet dies, dass der Begriffsverband Testpersonen eine bessere Möglichkeit bietet, sich mit dem Thema E-Mobilität kritisch auseinanderzusetzen. \\
 
-% Navigation 
-% Hamming
+Dies lässt sich auch an den Ergebnissen der Aufgaben zur Navigation durch die Prototypen erkennen.
+Um die Daten auszuwerten werden die Kreuztabellen aus \autoref{table:list-worlds} und \autoref{table:fca-worlds} verwendet.
+Zu Interpretationszwecken wird die Inzidenzrelation dabei als boolesche Variable gelesen.
+Das heißt, dass ein Kreuz $\times$ als eine Eins und eine leere Zelle als eine Null interpretiert wird.
+Auf diese Weise lässt sich die Inzidenzrelation als binäre Matrix darstellen.
+Beim Experiment wurden pro Person je fünf Artikel je Prototyp festgehalten.
+Das bedeutet, dass für jede Testperson die Inzidenzrelation eine 5x8 Matrix ist.
+Die Zeilen entsprechen dabei den Artikeln und die Spalten entsprechen den unterschiedlichen Welten der \ac{EC}.
+Für Testperson 1 würde die Matrix dann wie folgt aussehen:
+
+\setcounter{equation}{0}
+\begin{equation}
+    \begin{matrix}
+        1 & 0 & 1 & 0 & 1 & 0 & 1 & 0 \\
+        1 & 0 & 1 & 0 & 1 & 0 & 1 & 0 \\
+        1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
+        1 & 0 & 1 & 0 & 0 & 1 & 1 & 0 \\
+    \end{matrix}
+\end{equation}
+
+Diese Matrix kann nun verwendet werden, um die Hamming-Distanz zwischen den Welten zu berechnen.
+Die Hamming-Distanz ist eine Metrik, welche die Anzahl unterschiedlicher Elemente zwischen zwei Codewörtern misst \textcolor{red}{TODO: cite}.
+In diesem Fall wird die Hamming-Distanz zwischen den Welten berechnet.
+Dabei gibt diese an wie viele der Welten sich pro Artikel unterscheiden.
+% Rechenbeispiel
+% Gesamte Matrix zeilenweise -> Pfad
