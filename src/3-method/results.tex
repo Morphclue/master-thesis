@@ -434,4 +434,31 @@ Die kumulative Hamming-Distanz kann als Diversitätsmaß für die gelesenen Arti
 Eine höhere kumulative Hamming-Distanz lässt sich gleichsetzen mit einer höheren Diversität aller gelesenen Artikel.
 Auffällig ist hierbei in \autoref{fig:hamming-distance}, dass die kumulative Hamming-Distanz für den Begriffsverband einen höheren Minimal- und Maximalwert aufweist.
 Basierend auf dieser Interpretation als Diversitätsmaß kann festgestellt werden, dass der Begriffsverband im Vergleich zum anderen Prototypen zu einer höheren Diversität bei der Navigation durch die Artikel geführt hat.
+Es ist ebenfalls zu erkennen, dass bei der Liste das Diversitätsmaß erst beim Lesen des dritten Artikels ansteigt.
+Dies würde dafür sprechen, dass Personen durch die Positionierung in der Liste dazu verleitet wurden die Artikel nach absteigender Reihenfolge zu lesen.
 
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.8\columnwidth]{figures/comparison-line.pdf}
+    \caption{\label{fig:mean-hamming}Durchschnittliche kumulative Hamming-Distanz}
+\end{figure}
+
+% Durchschnittliche Hamming-Distanz
+Diese Beobachtung lässt sich deutlich bei der durchschnittlichen kumulativen Hamming-Distanz in \autoref{fig:mean-hamming} erkennen.
+Die durchschnittliche kumulative Hamming-Distanz ist der Mittelwert der kumulativen Hamming-Distanz aller Testpersonen.
+Der Mittelwert ist im Graphen für jeden Artikel als Text angegeben.
+Das Band um die Linie stellt die Standardabweichung dar.
+Dabei wurde die eine Standardabweichung, welche unter dem Wert null liegen würde nicht dargestellt.
+Stattdessen werden alle Werte unter null auf null gesetzt.
+Der Grund dafür ist, dass eine negative Hamming-Distanz keine sinnvolle Interpretation besitzt.
+Eine negative Hamming-Distanz würde bedeuten, dass die beiden Artikel tatsächlich näher beieinander liegen als ein und derselbe Artikel.
+Dies wäre ein Widerspruch, da die Hamming-Distanz die Anzahl der Positionen misst, an denen sich die beiden Artikel unterscheiden.
+Daher ist der niedrigste sinnvolle Wert für die Hamming-Distanz eine Null, da diese bedeutet, dass zwei aufeinanderfolgende Artikel in Bezug auf ihre Merkmale identisch sind.\\
+
+% Beobachtung Durchschnittliche Hamming-Distanz
+In \autoref{fig:mean-hamming} ist zu erkennen, dass die durchschnittliche kumulative Hamming-Distanz für den Begriffsverband im Vergleich zur Liste in jedem Schritt höher ist.
+Besonders der erste angeklickte Artikel weist eine deutlich höhere durchschnittliche kumulative Hamming-Distanz auf.
+Es lässt sich ebenfalls deutlich erkennen, dass die Standardabweichung für den Begriffsverband im Regelfall über dem Mittelwert der Liste liegt.
+Dies bedeutet, dass die Testpersonen bei der Navigation durch den Begriffsverband selbst nach Abweichung vom Mittelwert eine höhere Diversität aufweisen als bei der Liste.
+Da zu wenige Testpersonen am Experiment teilgenommen haben, lässt sich diese Beobachtung nicht als statistisch signifikant bewerten.
+Dennoch ist diese Beobachtung ein Indiz dafür, dass der Begriffsverband zu einer höheren Diversität bei der Navigation durch die Artikel führt als eine traditionelle Listendarstellung.
