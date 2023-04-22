@@ -361,7 +361,7 @@ Auf diese Weise lässt sich die Inzidenzrelation als binäre Matrix darstellen.
 Beim Experiment wurden pro Person je fünf Artikel je Prototyp festgehalten.
 Das bedeutet, dass für jede Testperson die Inzidenzrelation eine 5x8 Matrix ist.
 Die Zeilen entsprechen dabei den Artikeln und die Spalten entsprechen den unterschiedlichen Welten der \ac{EC}.
-Für Testperson 1 würde die Matrix dann wie folgt aussehen:
+Für Testperson 1 sieht die Matrix für den Listen-Prototyp wie folgt aus:
 
 \setcounter{equation}{0}
 \begin{equation}
@@ -378,5 +378,27 @@ Diese Matrix kann nun verwendet werden, um die Hamming-Distanz zwischen den Welt
 Die Hamming-Distanz ist eine Metrik, welche die Anzahl unterschiedlicher Elemente zwischen zwei Codewörtern misst \textcolor{red}{TODO: cite}.
 In diesem Fall wird die Hamming-Distanz zwischen den Welten berechnet.
 Dabei gibt diese an wie viele der Welten sich pro Artikel unterscheiden.
+Im Begriffsverband sieht die Navigation für Person 1 wie folgt aus:
+\begin{equation}
+    \begin{array}{ccccccccc}
+        1                  & 0 & 1 & 0                  & 0                  & 0                  & 0                  & 0 &                                              \\
+        1                  & 0 & 1 & 0                  & 0                  & 0                  & 0                  & 0 & \multicolumn{1}{r}{\quad\textcolor{blue}{0}} \\
+        1                  & 0 & 1 & 0                  & 0                  & \textcolor{red}{1} & \textcolor{red}{1} & 0 & \multicolumn{1}{r}{\quad\textcolor{blue}{2}} \\
+        1                  & 0 & 1 & 0                  & \textcolor{red}{1} & \textcolor{red}{0} & 1                  & 0 & \multicolumn{1}{r}{\quad\textcolor{blue}{2}} \\
+        \textcolor{red}{0} & 0 & 1 & \textcolor{red}{1} & \textcolor{red}{0} & 0                  & \textcolor{red}{0} & 0 & \multicolumn{1}{r}{\quad\textcolor{blue}{4}} \\
+    \end{array}
+    \label{eq:hamming-distance}
+\end{equation}
+
+% Rot = Unterschiede Blau = Summe der Unterschiede 
+In \autoref{eq:hamming-distance} sind die Unterschiede zwischen den Welten und die daraus resultierende Hamming-Distanz farblich hervorgehoben.
+Die Farbe Rot zeigt an, dass sich ein Artikel zum vorherigen an der markierten Stelle unterscheidet.
+In Blau ist die Anzahl der roten Zellen pro Zeile angegeben.
+Die erste Zeile hat immer eine Hamming-Distanz von null, da es keinen vorherigen Artikel gibt.
+Die Hamming-Distanz der zweiten Zeile ist in diesem Fall ebenfalls null, da sich der Artikel hinsichtlich der Welten nicht vom ersten unterscheidet.
+In der dritten Zeile gibt es den ersten Unterschied zum vorherigen Artikel.
+Dieser Unterschied ist in Spalte 5 und 6 aufzufinden.
+Dieser Artikel weist im Vergleich zum vorherigen Artikel die Merkmale Staat- und Grün\texttt{+} auf.
+
 % Rechenbeispiel
 % Gesamte Matrix zeilenweise -> Pfad
