@@ -31,7 +31,7 @@ plot_single_line <- function(article_file_name, person_file_name) {
 
   df_mean <- df %>%
     group_by(Article) %>%
-    summarise(Distance = mean(Distance))
+    summarise(Mean = mean(Distance), SD = sd(Distance))
 
   return(df_mean)
 }
@@ -40,12 +40,16 @@ df_list_mean <- plot_single_line("list-articles", "list-persons")
 df_fca_mean <- plot_single_line("fca-articles", "fca-persons")
 
 ggplot() +
-  geom_line(data = df_list_mean, aes(x = Article, y = Distance, color = "List")) +
-  geom_line(data = df_fca_mean, aes(x = Article, y = Distance, color = "FCA")) +
+  geom_line(data = df_list_mean, aes(x = Article, y = Mean, color = "Liste")) +
+  geom_line(data = df_fca_mean, aes(x = Article, y = Mean, color = "Begriffsverband")) +
+  geom_ribbon(data = df_list_mean, aes(x = Article, ymin = ifelse(Mean - SD > 0, Mean - SD, 0), ymax = Mean + SD, fill = "Liste"), alpha = 0.2) +
+  geom_ribbon(data = df_fca_mean, aes(x = Article, ymin = ifelse(Mean - SD > 0, Mean - SD, 0), ymax = Mean + SD, fill = "Begriffsverband"), alpha = 0.2) +
+  geom_text(data = df_list_mean, aes(x = Article, y = Mean, label = round(Mean, 2)), hjust = -0.5, vjust = -1, size = 3, color = "blue") +
+  geom_text(data = df_fca_mean, aes(x = Article, y = Mean, label = round(Mean, 2)), hjust = 1.5, vjust = -1, size = 3, color = "red") +
   labs(x = "Artikel", y = "Kumulative Hamming-Distanz",
-       title = "Durchschnittliche kumulative Hamming-Distanz zwischen aufeinanderfolgenden Artikeln",
+       title = "Durchschnittliche kumulative Hamming-Distanz zwischen Artikeln",
        color = "Prototyp") +
   theme_minimal() +
   theme(plot.title = element_text(hjust = 0.5)) +
   scale_x_continuous(breaks = seq(1, length(df_list_mean$Article), 1)) +
-  scale_y_discrete(limits = c(0, 8))
+  guides(fill = "none")
