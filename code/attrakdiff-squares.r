@@ -19,16 +19,16 @@ ggplot() +
   geom_blank() +
   scale_x_continuous(limits = c(-limit, limit), expand = c(0, 0), name = "PQ") +
   scale_y_continuous(limits = c(-limit, limit), expand = c(0, 0), name = "HQ") +
-  annotate("rect", xmin = -limit, xmax = limit, ymin = -limit, ymax = limit, fill = "gray60", color = NA) +
+  annotate("rect", xmin = -limit, xmax = limit, ymin = -limit, ymax = limit, fill = "gray80", color = NA) +
   geom_vline(xintercept = c(-intercept, intercept), color = "white", size = 2) +
   geom_hline(yintercept = c(-intercept, intercept), color = "white", size = 2) +
-  annotate("text", x = -pos, y = pos, label = "zu selbstorientiert", size = 7) +
+  annotate("text", x = -pos, y = pos, label = "zu\n selbstorientiert", size = 7) +
   annotate("text", x = 0, y = pos, label = "selbstorientiert", size = 7) +
   annotate("text", x = pos, y = pos, label = "begehrt", size = 7) +
   annotate("text", x = 0, y = 0, label = "neutral", size = 7) +
   annotate("text", x = pos, y = 0, label = "handlungsorientiert", size = 7) +
   annotate("text", x = -pos, y = -pos, label = "\u00FCberfl\u00FCssig", size = 7) +
-  annotate("text", x = pos, y = -pos, label = "zu handlungsorientiert", size = 7) +
+  annotate("text", x = pos, y = -pos, label = "zu\n handlungsorientiert", size = 7) +
   geom_point(data = data.frame(x = liste_pq, y = liste_hq), aes(x = x, y = y), size = 4, shape = 15) +
   geom_point(data = data.frame(x = fca_pq, y = fca_hq), aes(x = x, y = y), size = 4, shape = 15) +
   geom_rect(aes(
