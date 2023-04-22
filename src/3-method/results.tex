@@ -390,7 +390,6 @@ Im Begriffsverband sieht die Navigation für Person 1 wie folgt aus:
     \label{eq:hamming-distance}
 \end{equation}
 
-% Rot = Unterschiede Blau = Summe der Unterschiede 
 In \autoref{eq:hamming-distance} sind die Unterschiede zwischen den Welten und die daraus resultierende Hamming-Distanz farblich hervorgehoben.
 Die Farbe Rot zeigt an, dass sich ein Artikel zum vorherigen an der markierten Stelle unterscheidet.
 In Blau ist die Anzahl der roten Zellen pro Zeile angegeben.
@@ -398,7 +397,25 @@ Die erste Zeile hat immer eine Hamming-Distanz von null, da es keinen vorherigen
 Die Hamming-Distanz der zweiten Zeile ist in diesem Fall ebenfalls null, da sich der Artikel hinsichtlich der Welten nicht vom ersten unterscheidet.
 In der dritten Zeile gibt es den ersten Unterschied zum vorherigen Artikel.
 Dieser Unterschied ist in Spalte 5 und 6 aufzufinden.
-Dieser Artikel weist im Vergleich zum vorherigen Artikel die Merkmale Staat- und Grün\texttt{+} auf.
+Dieser Artikel weist im Vergleich zum vorherigen Artikel die Merkmale Staat- und Grün\texttt{+} auf.\\
 
-% Rechenbeispiel
-% Gesamte Matrix zeilenweise -> Pfad
+\begin{figure}[ht!]
+    \centering
+    \subfloat[\centering Liste]{{\includegraphics[width=6cm]{figures/list-line.pdf} }}%
+    \qquad
+    \subfloat[\centering Begriffsverband]{{\includegraphics[width=6cm]{figures/fca-line.pdf} }}%
+    \caption{Liniendiagramme - Vergleich Hamming-Distanz}
+    \label{fig:hamming-distance}
+\end{figure}
+
+\autoref{fig:hamming-distance} stellt im Vergleich die kumulative Hamming-Distanz für die beiden Prototypen dar.
+Die kumulative Hamming-Distanz ergibt sich aus der Summe der Hamming-Distanzen aller zuvor geklickten Artikel einer Testperson.
+In \autoref{eq:hamming-distance} ist die kumulative Hamming-Distanz für Person 1 gleich acht, da $0 + 2 + 2 + 4 = 8$.
+Diese schrittweise Summierung lässt sich auch am Liniendiagramm in \autoref{fig:hamming-distance} ablesen.
+Dabei stellt die x-Achse den aktuell gelesenen Artikel dar, welcher in der Matrix als Zeile repräsentiert wird.
+Die y-Achse stellt die bis zum gelesenen Artikel aufsummierte Hamming-Distanz dar.\\
+
+Die kumulative Hamming-Distanz kann als Diversitätsmaß für die gelesenen Artikel interpretiert werden.
+Eine höhere kumulative Hamming-Distanz lässt sich gleichsetzen mit einer höheren Diversität aller gelesenen Artikel.
+Auffällig ist hierbei in \autoref{fig:hamming-distance}, dass die kumulative Hamming-Distanz für den Begriffsverband einen höheren Minimal- und Maximalwert aufweist.
+Basierend auf dieser Interpretation als Diversitätsmaß kann festgestellt werden, dass der Begriffsverband im Vergleich zum anderen Prototypen zu einer höheren Diversität bei der Navigation durch die Artikel geführt hat.
