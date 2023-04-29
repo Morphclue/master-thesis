@@ -46,10 +46,13 @@ ggplot() +
   geom_ribbon(data = df_fca_mean, aes(x = Article, ymin = ifelse(Mean - SD > 0, Mean - SD, 0), ymax = Mean + SD, fill = "Begriffsverband"), alpha = 0.2) +
   geom_text(data = df_list_mean, aes(x = Article, y = Mean, label = round(Mean, 2)), hjust = -0.5, vjust = -1, size = 3, color = "blue") +
   geom_text(data = df_fca_mean, aes(x = Article, y = Mean, label = round(Mean, 2)), hjust = 1.5, vjust = -1, size = 3, color = "red") +
-  labs(x = "Artikel", y = "Kumulative Hamming-Distanz",
-       title = "Durchschnittliche kumulative Hamming-Distanz zwischen Artikeln",
-       color = "Prototyp") +
-  theme_minimal() +
-  theme(plot.title = element_text(hjust = 0.5)) +
+  labs(x = "Artikel", y = "Kumulative Hamming-Distanz", color = "Prototyp") +
   scale_x_continuous(breaks = seq(1, length(df_list_mean$Article), 1)) +
-  guides(fill = "none")
+  guides(fill = "none") +
+  theme_minimal() +
+  theme(
+    axis.title.x = element_text(size = 12, face = "bold"),
+    axis.title.y = element_text(size = 12, face = "bold"),
+    legend.title = element_text(size = 12, face = "bold"),
+    legend.text = element_text(size = 12),
+  )
