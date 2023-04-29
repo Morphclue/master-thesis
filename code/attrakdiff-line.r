@@ -33,7 +33,8 @@ ggplot(data, aes(x = Kategorie)) +
   scale_y_continuous(limits = c(-3, 3), breaks = seq(-3, 3, by = 1), expand = c(0, 0)) +
   theme_minimal() +
   theme(
-    axis.text.x = element_text(size = 12),
-    axis.title.x = element_text(size = 12),
-    axis.title.y = element_text(size = 12)
+    axis.title.x = element_text(size = 12, face = "bold"),
+    axis.title.y = element_text(size = 12, face = "bold"),
+    legend.title = element_text(size = 12, face = "bold"),
+    legend.text = element_text(size = 12),
   )
