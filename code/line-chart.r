@@ -35,9 +35,7 @@ plot_line <- function(article_file_name, person_file_name) {
 
   ggplot(df, aes(x = Article, y = Distance, group = Person)) +
     geom_line(aes(color = factor(Person))) +
-    labs(x = "Artikel", y = "Kumulative Hamming-Distanz",
-         title = "Kumulative Hamming-Distanz zwischen aufeinanderfolgenden Artikeln",
-         color = "Person") +
+    labs(x = "Artikel", y = "Kumulative Hamming-Distanz", color = "Person") +
     theme_minimal() +
     theme(plot.title = element_text(hjust = 0.5)) +
     scale_x_continuous(breaks = seq(1, length(person_cum_distance[[1]]), 1)) +
