@@ -45,7 +45,7 @@ Aus diesem Grund wurden die Testpersonen gebeten, möglichst ehrlich zu antworte
 
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=1\columnwidth]{figures/boxplot.pdf}
+    \includegraphics[width=0.9\columnwidth]{figures/boxplot.pdf}
     \caption{\label{fig:age-boxplot}Boxplot zur Altersverteilung von Testpersonen}
 \end{figure}
 
@@ -115,7 +115,7 @@ In diesem Fall ist der Parameter, welcher die Relevanz bestimmt, die Ähnlichkei
 Die Ähnlichkeit wurde manuell definiert.
 Dabei richtet sich Ähnlichkeit danach, welche Welten der \ac{EC} den Artikel zugeordnet wurden.
 Dadurch wird ein content-based \ac{RS} simuliert, welches die Artikel bezüglich der Ähnlichkeit ihres Inhalts empfiehlt.\\
-\begin{table}
+\begin{table}[!ht]
     \centering
     \newcolumntype{I}{>{\centering\arraybackslash}p{10pt}}
     \newcommand{\x}{$\times$}
@@ -218,7 +218,9 @@ Der unterste Knoten vereinigt die Eigenschaften aller darüberliegenden Knoten.
 Auf diese Weise gehören Artikel, welche im untersten Knoten liegen, zu der Welt Industrie und rechtfertigen sich positiv und negativ bezüglich dieser Welt.
 Der aus der Reduktion resultierende Graph enthält statt der vier Knoten nur noch einen Knoten.
 Wenn man dies für den ganzen Graphen anwendet, dann kann der Graph der Vorstudie mit ursprünglich 14 Knoten auf fünf Knoten reduziert werden (siehe \autoref{sec:stuff} \autoref{fig:fba-smaller}).
-Der reduzierte Graph enthält jedoch auch weniger Informationen, da die Rechtfertigungen für die unterschiedlichen Welten nicht mehr dargestellt werden.\\
+Der reduzierte Graph enthält jedoch auch weniger Informationen, da die Rechtfertigungen für die unterschiedlichen Welten nicht mehr dargestellt werden. 
+
+\newpage
 
 \begin{figure}[!ht]
     \centering
@@ -360,7 +362,7 @@ Da eine Interaktion mit dem oberen Halbkreis bereits dazu führt, dass alle unte
 Stattdessen beschränkt sich die Liste auf die Artikel, welche in der ausgewählten Welt vorkommen. \\
 
 % Tabelle + Graph
-\begin{table}
+\begin{table}[!ht]
     \centering
     \newcolumntype{I}{>{\centering\arraybackslash}p{10pt}}
     \newcommand{\x}{$\times$}
@@ -419,7 +421,9 @@ Es kommt häufig in Computerspielen zum Einsatz.
 Dort wird es verwendet, um Spielenden die zugrunde liegende Steuerung des Spiels in einem interaktiven Format zu vermitteln.
 Dabei werden explizite oder implizite Anweisungen gegeben, welche Spielende Schritt für Schritt durch das Tutorial führen.
 Diese Tutorials kommen jedoch auch in anderen Bereichen zum Einsatz.
-Auf diese Art und Weise werden spieltypische Elemente auf spielfremde Bereiche übertragen.
+Auf diese Art und Weise werden spieltypische Elemente auf spielfremde Bereiche übertragen. \\
+
+% Gamification
 Dieser Prozess wird als Gamification bezeichnet.
 Eine Studie zeigt, dass gamifizierte Lernvideos mit interaktiven Inhalten die Motivation und den Lernerfolg steigern können \cite{gamification-videos}.
 Genau diese Eigenschaften sollen im Tutorial des Prototyps zum Einsatz kommen.
@@ -494,12 +498,12 @@ Dies soll helfen, die gedankliche Brücke zwischen den beiden Konzepten zu schla
 Es wird ebenfalls die, in \autoref{subsubsec:prototyp-2} erwähnte, farbliche Verteilung erklärt.
 Diese farbliche Verteilung wird erst im dritten Teil des Tutorials eingeführt, da die farbliche Verteilung für Tiere und Nahrungsmittel nicht sinnvoll ist.
 Ebenfalls werden die beiden Interaktionen, welche mit einem Knoten möglich sind, erklärt.
-Die konkrete Funktionsweise der Interaktionen sind in \autoref{subsubsec:prototyp-2} beschrieben.\\
+Die konkrete Funktionsweise der Interaktionen sind in \autoref{subsubsec:prototyp-2} beschrieben.
 
 \subsection{Messinstrumente}
 Für die Evaluation der Prototypen wurden drei Fragebögen verwendet.
 Die ersten beiden Fragebögen wurden von anderen Forschenden entwickelt und dienen zum Vergleich beider Prototypen.
-Der dritte Fragebogen ist ein eigens entwickelter Fragebogen, welcher speziell Bezug auf das Experiment und die Erfahrungen der Testpersonen nimmt.\\
+Der dritte Fragebogen ist ein eigens entwickelter Fragebogen, welcher speziell Bezug auf das Experiment und die Erfahrungen der Testpersonen nimmt.
 
 \subsubsection{AttrakDiff}
 Der AttrakDiff ist ein Fragebogen, welcher zur Messung der \ac{UX} bezüglich eines Produkts verwendet wird \cite{attrakdiff-2000, attrakdiff-2003, attrakdiff-2008}.
@@ -509,7 +513,7 @@ Diese 28 Wortpaare werden in vier Gruppen zu je sieben Wortpaaren aufgeteilt.
 Die vier Gruppen dienen dazu, vier unterschiedliche Aspekte eines Produkts zu messen.
 Namentlich die \ac{PQ}, \ac{HQ-I}, \ac{HQ-S} und die Attraktivität eines Produkts.
 Dabei bilden die \ac{HQ-I} und die \ac{HQ-S} die gesamte \ac{HQ} eines Produkts ab.
-Für die Berechnung der \ac{HQ} werden die beiden Werte gemittelt. \\
+Für die Berechnung der \ac{HQ} werden die beiden Werte gemittelt.
 
 % Erklärung der Gruppen
 Die vier Gruppen legen Aspekte der \ac{UX} fest, da das Ziel des Fragebogens die Messung der subjektiven Erfahrung von Nutzenden mit einem Produkt ist.
